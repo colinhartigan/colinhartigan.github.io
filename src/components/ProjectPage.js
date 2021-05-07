@@ -28,7 +28,7 @@ class ProjectPage extends React.Component {
         const { classes } = this.props;
         
         return(
-            <Backdrop className={ classes.backdrop } open={ true }>
+            <Backdrop className={ classes.backdrop } open={ false }>
                 <Paper variant="outlined" className={ classes.paper }>
                     asdf
                 </Paper>
