@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 //components
 import ProjectCard from '../components/ProjectCard'
+import ProjectPage from '../components/ProjectPage'
 import { Grid, Container, Paper, Typography, Divider } from '@material-ui/core'
 
 const styles = theme => ({
@@ -96,12 +97,12 @@ class Explore extends React.Component {
 
     componentDidMount() {
         this.fetchRepos();
-        
+        console.log(this.state);
     }
 
 
     render(){
-        console.log(this.state)
+        
         const { classes } = this.props;
 
 
@@ -139,9 +140,9 @@ class Explore extends React.Component {
                                 })}
                             </Grid>
 
-
-
-
+                            
+                            <ProjectPage/>
+                            
 
                             <div className={classes.footer}>
                                 oh ouchie i hurt my foot on this here footer

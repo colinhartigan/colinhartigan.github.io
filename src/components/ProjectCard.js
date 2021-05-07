@@ -14,6 +14,8 @@ const styles = theme => ({
         display: "flex",
         width: "95%",
         height: "220px",
+        flexDirection: "column",
+        justifyContent: "space-between",
     },
 
     descText: {
@@ -25,6 +27,12 @@ const styles = theme => ({
         overflow: "hidden",
         textOverflow: "ellipsis",
         WebkitLineClamp: 4,
+    },
+
+    actions: {
+        display: "flex",
+        alignSelf: "flex-end",
+        justifyContent: "flex-end",
     },
 
     langChip: {
@@ -40,7 +48,6 @@ class ProjectCard extends React.Component {
     render() {
 
         const { classes } = this.props;
-        console.log(this.props)
 
         return (
             <Card className={classes.card}>
@@ -48,9 +55,12 @@ class ProjectCard extends React.Component {
                     <Typography variant="h5">{ this.props.data.name }</Typography>
                     <Chip size="small" label={ this.props.data.language } className={ classes.langChip } />
                     <Typography variant="body2" className={ classes.descText }>{ this.props.data.description }</Typography>
-                    
                 </CardContent>
+                <CardActions className={ classes.actions }>
+                    <Button size="small" variant="outlined">More</Button>
+                </CardActions>
             </Card>
+            
         )
     }
 }

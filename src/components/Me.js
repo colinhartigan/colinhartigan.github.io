@@ -16,6 +16,7 @@ const styles = theme => ({
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 10,
+        overflow: "hidden"
     },
 
     paperDiv: {
