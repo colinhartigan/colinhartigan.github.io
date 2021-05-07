@@ -13,23 +13,29 @@ const styles = theme => ({
     card: {
         display: "flex",
         width: "95%",
-        height: "200px",
-        alignContent: "flex-start",
-        textAlignVertical: "top",
+        height: "220px",
     },
 
-    langChips: {
+    descText: {
+        overflow: "hidden",
+        maxHeight: "8rem",
+        WebkitBoxOrient: "vertical",
+        display: "block",
+        display:" -webkit-box",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        WebkitLineClamp: 4,
     },
+
     langChip: {
         background: "linear-gradient(160deg, #24c6dc 0%, #514a9d 100%)",
         maxHeight: "20px",
-        margin: theme.spacing(.2,.3)
+        marginTop: "5px",
+        marginBottom: "5px"
     },
 });
 
 class ProjectCard extends React.Component {
-
-
 
     render() {
 
@@ -38,15 +44,12 @@ class ProjectCard extends React.Component {
 
         return (
             <Card className={classes.card}>
-                <CardHeader
-                    title={<div className={classes.langChips}>
-                        <Typography variant="h5">{ this.props.data.name }</Typography>
-                        <Chip size="small" label={ this.props.data.language } className={classes.langChip} />
-                    </div>}
-                    subheader={<Typography variant="body2">
-                        { this.props.data.description }
-                    </Typography>}
-                />
+                <CardContent>
+                    <Typography variant="h5">{ this.props.data.name }</Typography>
+                    <Chip size="small" label={ this.props.data.language } className={ classes.langChip } />
+                    <Typography variant="body2" className={ classes.descText }>{ this.props.data.description }</Typography>
+                    
+                </CardContent>
             </Card>
         )
     }

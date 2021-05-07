@@ -73,7 +73,7 @@ const styles = theme => ({
 
 })
 
-const excludeRepos = [343571477, 350130669]; //exclude awesome-cheatshets and colinhartigan README
+const excludeRepos = [343571477, 350130669, 364948715]; //exclude awesome-cheatshets and colinhartigan README, and this website
 
 class Explore extends React.Component {
 
@@ -130,8 +130,11 @@ class Explore extends React.Component {
                             <br/>
                             <Grid container spacing={2} className={classes.cardGrid} justify="center">
                                 {this.state.repos.map(data => {
-                                    if(data.private == false && excludeRepos.includes(data.id) == false){
+                                    if(data.private === false && excludeRepos.includes(data.id) === false){
                                         return <Grid container item xs={4} justify="center"><ProjectCard data={ data } /></Grid>
+                                    }
+                                    else{
+                                        return <div />
                                     }
                                 })}
                             </Grid>
@@ -141,7 +144,7 @@ class Explore extends React.Component {
 
 
                             <div className={classes.footer}>
-                                oh ouchie i hurt my foot
+                                oh ouchie i hurt my foot on this here footer
                             </div>
                         </Paper>
 
