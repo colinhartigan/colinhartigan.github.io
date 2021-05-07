@@ -19,6 +19,7 @@ const styles = theme => ({
         justifyContent: "center",
         background: "#303030",
         borderRadius: 0,
+        zIndex: 9,
     },
 
     nameText: {

@@ -22,6 +22,14 @@ const styles = theme => ({
 
 class Home extends React.Component {
 
+    constructor(props){
+        super(props);
+    }
+
+    componentDidMount() {
+        document.title = 'colinhartigan / home'
+    }
+
     render() {
         const { classes } = this.props;
         return (

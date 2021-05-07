@@ -105,17 +105,17 @@ class Me extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            languages: ['Python', 'C++', 'C', 'JS', 'React', 'Java', 'SPiiPlus'],
+            languages: ['Python', 'C++', 'C', 'JS', 'React', 'Java', 'SPiiPlus', 'Luau'],
             renderedLanguages: {},
+            buttonEnabled: true,
         }
     }
 
     componentDidMount() {
         this.prepareChips();
-    }
-
-    langShadowCycle() {
-        
+        setTimeout(() => {
+            this.setState({buttonEnabled: false});
+        }, 4000);
     }
 
     prepareChips() {
@@ -168,7 +168,7 @@ class Me extends React.Component {
                                     <Grid item xs>
                                         <Fade in style={{ transitionDelay: '4000ms' }}>
                                             <div className={classes.buttonHolder}>
-                                                <Button color="primary" size="medium" className={classes.goButton} component={Link} to="/explore">
+                                                <Button color="primary" size="medium" className={classes.goButton} component={Link} disabled={ this.state.buttonEnabled } to="/explore">
                                                     explore projects
                                                 </Button>
                                             </div>

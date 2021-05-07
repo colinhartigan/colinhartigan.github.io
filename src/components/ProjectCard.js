@@ -18,9 +18,22 @@ const styles = theme => ({
         justifyContent: "space-between",
     },
 
-    descText: {
+    titleText: {
         overflow: "hidden",
-        maxHeight: "8rem",
+        maxHeight: "2rem",
+        WebkitBoxOrient: "vertical",
+        display: "block",
+        display:" -webkit-box",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        WebkitLineClamp: 1,
+        wordBreak: "break-word",
+    },
+
+    descText: {
+        marginTop: "4px",
+        overflow: "hidden",
+        maxHeight: "6rem",
         WebkitBoxOrient: "vertical",
         display: "block",
         display:" -webkit-box",
@@ -51,8 +64,8 @@ class ProjectCard extends React.Component {
 
         return (
             <Card className={classes.card}>
-                <CardContent>
-                    <Typography variant="h5">{ this.props.data.name }</Typography>
+                <CardContent style={{ paddingBottom: "8px" }}>
+                    <Typography variant="h5" className={ classes.titleText }>{ this.props.data.name }</Typography>
                     <Chip size="small" label={ this.props.data.language } className={ classes.langChip } />
                     <Typography variant="body2" className={ classes.descText }>{ this.props.data.description }</Typography>
                 </CardContent>

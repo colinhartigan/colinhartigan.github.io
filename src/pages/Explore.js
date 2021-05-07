@@ -74,7 +74,7 @@ const styles = theme => ({
 
 })
 
-const excludeRepos = [343571477, 350130669, 364948715]; //exclude awesome-cheatshets and colinhartigan README, and this website
+const excludeRepos = [343571477, 350130669]; //exclude awesome-cheatshets and colinhartigan README
 
 class Explore extends React.Component {
 
@@ -97,7 +97,7 @@ class Explore extends React.Component {
 
     componentDidMount() {
         this.fetchRepos();
-        console.log(this.state);
+        document.title = 'colinhartigan / explore'
     }
 
 
