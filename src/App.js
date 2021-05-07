@@ -11,7 +11,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 //components
 import TopBar from './components/TopBar'
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect, HashRouter } from "react-router-dom";
 
 const darkTheme = createMuiTheme({
     palette: {
@@ -27,7 +27,7 @@ function App() {
 
                 <TopBar />
 
-                <Router>
+                <HashRouter>
                     <Switch>
                         <Route exact path="/">
                             <Redirect to="/home" />
@@ -39,7 +39,7 @@ function App() {
                             <Explore />
                         </Router>
                     </Switch>
-                </Router>
+                </HashRouter>
             </ThemeProvider>
         </React.Fragment>
     );
