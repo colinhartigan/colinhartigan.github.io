@@ -5,8 +5,11 @@ import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
 //components
+import ProjectPage from './ProjectPage'
 import { Grid, Paper, Typography, Chip, Button, Fade, Grow, Zoom, IconButton } from '@material-ui/core'
 import { Card, CardActionArea, CardActions, CardContent, CardHeader, CardMedia, Collapse } from '@material-ui/core'
+
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 const styles = theme => ({
 
@@ -19,10 +22,8 @@ const styles = theme => ({
     },
 
     titleText: {
-        overflow: "hidden",
         maxHeight: "2rem",
         WebkitBoxOrient: "vertical",
-        display: "block",
         display:" -webkit-box",
         overflow: "hidden",
         textOverflow: "ellipsis",
@@ -32,10 +33,8 @@ const styles = theme => ({
 
     descText: {
         marginTop: "4px",
-        overflow: "hidden",
         maxHeight: "6rem",
         WebkitBoxOrient: "vertical",
-        display: "block",
         display:" -webkit-box",
         overflow: "hidden",
         textOverflow: "ellipsis",
@@ -48,6 +47,10 @@ const styles = theme => ({
         justifyContent: "flex-end",
     },
 
+    moreButton: {
+        //background: "#deaa50", //figure out another gradient to use here
+    },
+
     langChip: {
         background: "linear-gradient(160deg, #24c6dc 0%, #514a9d 100%)",
         maxHeight: "20px",
@@ -57,6 +60,21 @@ const styles = theme => ({
 });
 
 class ProjectCard extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            'showProjectPage': false,
+        }
+    }
+
+    componentDidMount() {
+        this.toggleProjectPage();
+    }
+
+    toggleProjectPage() {
+        this.setState({showProjectPage: !this.state.showProjectPage});
+    }
 
     render() {
 
@@ -70,7 +88,15 @@ class ProjectCard extends React.Component {
                     <Typography variant="body2" className={ classes.descText }>{ this.props.data.description }</Typography>
                 </CardContent>
                 <CardActions className={ classes.actions }>
-                    <Button size="small" variant="outlined">More</Button>
+                    { this.state.showProjectPage ? 
+                        <Grow in={ this.state.showProjectPage }>
+                            <Button size="small" variant="outlined" className={ classes.moreButton } onClick={ this.toggleProjectPage.bind(this) }>
+                                <ArrowForwardIcon/>
+                            </Button> 
+                        </Grow> : 
+                        <ProjectPage data={this.props.data} onClick={this.toggleProjectPage.bind(this)}/>
+                    }
+                    
                 </CardActions>
             </Card>
             

@@ -141,11 +141,11 @@ class Explore extends React.Component {
                             </Grid>
 
                             
-                            <ProjectPage/>
+                            
                             
 
                             <div className={classes.footer}>
-                                oh ouchie i hurt my foot on this here footer
+                                repos automatically fetched from github/colinhartigan
                             </div>
                         </Paper>
 
