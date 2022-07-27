@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    mode: "jit",
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
         fontFamily: {
@@ -8,12 +9,12 @@ module.exports = {
         },
         extend: {
             animation: {
-                title: 'titleTranslateIn 1s ease-out',
+                arrowPeriodic: 'arrowDown 5s linear infinite',
             },
             keyframes: {
-                titleTranslateIn: {
-                    '0%': { transform: "translateY(-110%)" },
-                    '100%': { translateY: "translateY(0%)" },
+                arrowDown: {
+                    '0%': { transform: "translateY(-100%)" },
+                    '70%, 100%': { transform: "translateY(100%)" },
                 },
             },
         },
