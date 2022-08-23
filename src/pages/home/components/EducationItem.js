@@ -15,7 +15,7 @@ function GridRow(props) {
                     </p>
                 </a>
                 <div className="flex flex-row justify-center align-center h-full">
-                    <p className="text-lg m-auto h-full text-center p-2 border-r-2 border-black">
+                    <p className="text-lg m-auto w-36 h-full text-center p-2 border-r-2 border-black">
                         {data.dates}
                     </p>
                     <p className="text-lg m-auto h-full p-2 text-center grow">
