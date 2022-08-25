@@ -3,7 +3,7 @@ import react from 'react';
 import Icon from '@mdi/react'
 import { mdiFileAccount, mdiGithub, mdiLinkedin } from '@mdi/js';
 
-import me from '../../assets/me.jpg';
+import me from '../../assets/me.png';
 import namebg from '../../assets/namebg.png'
 import background from '../../assets/background.png'
 
