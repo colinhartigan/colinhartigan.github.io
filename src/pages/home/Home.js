@@ -1,4 +1,4 @@
-import react from 'react';
+import react, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 import Icon from '@mdi/react'
@@ -39,6 +39,12 @@ function Home(props) {
             "last": true,
         },
     ]
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0  
+        })
+    })
 
     return (
         <>
