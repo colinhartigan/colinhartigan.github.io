@@ -52,7 +52,7 @@ function Timline(props) {
 
     return (
         <>
-            <div className="h-auto w-full relative flex flex-row items-start justify-start">
+            <div className="h-auto w-full mt-6 relative flex flex-row items-start justify-start">
 
                 {/* <div className="min-h-[100%] absolute grow w-[2px] bg-black">
                 </div> */}
