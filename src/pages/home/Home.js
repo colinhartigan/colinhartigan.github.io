@@ -8,6 +8,7 @@ import namebg from '../../assets/namebg.png'
 import background from '../../assets/background.png'
 
 import EducationItem from './components/EducationItem';
+import Experience from '../experience/components/Timeline';
 
 function Home(props) {
 
@@ -53,7 +54,7 @@ function Home(props) {
                                 MD 🡢 ATL
                             </p>
                             <p className="text-2xl border-2 border-black border-l-0 border-t-0 py-2 px-4 font-medium text-center">
-                                GT ECE 2026
+                                <span className="text-[#B3A369]">GT</span> ECE 2026
                             </p>
                             <p className="text-2xl border-2 grow bg-black border-black border-l-0 border-t-0 py-2 px-4 font-medium text-center">
 
@@ -87,7 +88,7 @@ function Home(props) {
                 </div>
             </div>
 
-            <div className="xl:h-screen h-[200vh] mx-auto max-w-[80%] xl py-7 flex flex-col items-start justify-start">
+            <div className="xl:h-screen h-[200vh] mx-auto max-w-[80%] xl pb-7 pt-20 flex flex-col items-start justify-start">
 
                 <div className="relative h-full xl:h-[50%]">
                     <div className="relative flex flex-col items-start h-auto z-10 pl-8">
@@ -133,9 +134,6 @@ function Home(props) {
                 </div>
             </div>
 
-            <div className="h-screen mx-auto flex flex-col items-center justify-center">
-                bruh
-            </div>
         </>
 
     )

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Icon from '@mdi/react'
 import { mdiMenu } from '@mdi/js';
 
@@ -6,22 +8,13 @@ function Header(props) {
     return (
         <div className="fixed z-50 h-12 w-full bg-white border-black border-2 overflow-hidden mr-12">
             <div className="w-full h-full m-auto flex flex-row justify-start items-center">
-                <div className="w-min h-full border-black border-r-2 flex flex-column items-center justify-center">
-                    <p className="w-full h-auto text-4xl p-2 font-medium text-center">
-                        CH
-                    </p>
-                </div>
                 <div className="hidden lg:visible w-auto h-full lg:flex flex-row items-center justify-center border-black border-r-2">
-                    <a href="">
-                        <p className="w-auto h-auto px-6 text-center text-xl">
-                            home
-                        </p>
-                    </a>
-                    <a href="">
-                        <p className="w-auto h-auto px-6 text-center text-xl">
-                            experience
-                        </p>
-                    </a>
+                    <Link to="/home" className="w-auto h-auto px-6 text-center text-xl">
+                        home
+                    </Link>
+                    <Link to="/experience" className="w-auto h-auto px-6 text-center text-xl">
+                        experience
+                    </Link>
                     <a href="">
                         <p className="w-auto h-auto px-6 text-center text-xl">
                             projects
