@@ -1,4 +1,5 @@
 import react from 'react';
+import { Link } from 'react-router-dom'
 
 import Icon from '@mdi/react'
 import { mdiFileAccount, mdiGithub, mdiLinkedin } from '@mdi/js';
@@ -65,10 +66,10 @@ function Home(props) {
                     {/* socials */}
                     <div className="flex flex-row align-center justify-center space-x-4 mt-1">
                         <a href="https://github.com/colinhartigan">
-                            <Icon path={mdiGithub} title="GitHub" color="black" width={iconSize} height={iconSize} />
+                            <Icon path={mdiGithub} title="GitHub - colinhartigan" color="black" width={iconSize} height={iconSize} />
                         </a>
                         <a href="https://www.linkedin.com/in/colin-hartigan/">
-                            <Icon path={mdiLinkedin} title="LinkedIn" color="black" width={iconSize} height={iconSize} />
+                            <Icon path={mdiLinkedin} title="LinkedIn - Colin Hartigan" color="black" width={iconSize} height={iconSize} />
                         </a>
                     </div>
                 </div>
@@ -131,6 +132,20 @@ function Home(props) {
                     <div className="absolute top-0 right-0 pt-8 w-auto h-full z-0">
                         <img className="h-full w-auto object-contain z-0" src="https://www.exploregeorgia.org/sites/default/files/legacy_images/TechTowerSign.jpg" alt="thing" />
                     </div>
+                </div>
+            </div>
+
+            <div className="xl:h-screen h-[200vh] mx-auto max-w-[80%] pb-7 pt-20 flex flex-col items-center justify-center">
+                <p className="text-2xl">
+                    discover more
+                </p>
+                <div className="w-full h-auto mt-6 flex flex-row items-center justify-center gap-6">
+                    <Link to="/experience" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
+                        experience
+                    </Link>
+                    <Link to="/projects" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
+                        projects
+                    </Link>
                 </div>
             </div>
 

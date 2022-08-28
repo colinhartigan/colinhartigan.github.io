@@ -15,24 +15,17 @@ function Header(props) {
                     <Link to="/experience" className="w-auto h-auto px-6 text-center text-xl">
                         experience
                     </Link>
-                    <a href="">
-                        <p className="w-auto h-auto px-6 text-center text-xl">
-                            projects
-                        </p>
-                    </a>
-
+                    <Link to="/projects" className="w-auto h-auto px-6 text-center text-xl">
+                        projects
+                    </Link>
                 </div>
                 <div className="hidden lg:visible w-auto h-full lg:flex flex-row items-center justify-center">
-                    <a href="">
-                        <p className="w-auto h-auto px-6 text-center text-xl">
-                            contact
-                        </p>
-                    </a>
-                    <a href="">
-                        <p className="w-auto h-auto px-6 text-center text-xl">
-                            résumé
-                        </p>
-                    </a>
+                    <Link to="/contact" className="w-auto h-auto px-6 text-center text-xl">
+                        contact
+                    </Link>
+                    <Link to="/resume" className="w-auto h-auto px-6 text-center text-xl">
+                        résumé
+                    </Link>
                 </div>
 
                 <div className="w-full h-full m-auto flex grow bg-black" />

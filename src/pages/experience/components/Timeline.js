@@ -54,16 +54,14 @@ function Timline(props) {
         <>
             <div className="h-auto w-full relative flex flex-row items-start justify-start">
 
-                <div className="min-h-[100%] absolute grow w-[2px] bg-black">
-                </div>
+                {/* <div className="min-h-[100%] absolute grow w-[2px] bg-black">
+                </div> */}
 
                 <div className="w-auto min-h-full flex flex-col justify-between items-start gap-12">
 
-                    <div className="h-6 absolute grow w-[2px] bg-black"/>
-
                     {data.map((element) => {
                         return (
-                            <div className="h-auto w-full border-l-2 border-black flex flex-row justify-start items-center">
+                            <div className="h-auto w-full flex flex-row justify-start items-center">
 
 
                                 <div className="min-h-full min-w-[33%] grow flex-col items-start justify-start">
