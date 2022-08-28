@@ -61,10 +61,10 @@ function Timline(props) {
 
                     {data.map((element) => {
                         return (
-                            <div className="h-auto w-full flex flex-row justify-start items-center">
+                            <div className="h-auto w-full flex flex-col lg:flex-row justify-start items-center">
 
 
-                                <div className="min-h-full min-w-[33%] grow flex-col items-start justify-start">
+                                <div className="min-h-full min-w-full lg:min-w-[33%] grow flex-col items-start justify-start">
 
                                     <div className="h-full w-full flex grow flex-col justify-center items-start">
                                         <p className="mx-3 text-3xl">

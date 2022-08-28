@@ -141,7 +141,7 @@ function Home(props) {
                 </div>
             </div>
 
-            <div className="xl:h-screen h-[200vh] mx-auto max-w-[80%] pb-7 pt-20 flex flex-col items-center justify-center">
+            <div className="h-screen mx-auto max-w-[80%] pb-7 pt-20 flex flex-col items-center justify-center">
                 <p className="text-2xl">
                     discover more
                 </p>
