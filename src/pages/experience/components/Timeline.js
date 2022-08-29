@@ -95,7 +95,7 @@ function Timline(props) {
 
                                 <div className="h-full w-auto grow flex flex-col justify-center items-center">
                                     <div className="w-full grow border-black border-2">
-                                        <p className="p-3 text-2xl h-full">
+                                        <p className="p-3 text-xl h-full">
                                             {element.content.description}
                                         </p>
                                     </div>
