@@ -43,14 +43,20 @@ function Timline(props) {
             location: "North East, MD",
             date: "july 2022",
             content: {
-                description: "As a cabin counselor, I led and managed a cabin of 10-12 children during one-week sleep-away camp sessions. Additionally, I taught instructional classes in creative arts, team building, and recreational sports. In collaboration with a co-counselor, I became acquainted with the campers' needs and accomodated them to enhance their camp experience.",
+                description: "As a cabin counselor, I led and managed cabins of 10-12 children during one-week sleep-away camp sessions. Additionally, I taught instructional classes in creative arts, team building, and recreational sports. In collaboration with a co-counselor, I became acquainted with the campers' needs and accomodated them to enhance their camp experience.",
                 tags: ["leadership", "behavior management", "communication"],
             }
         },
     ]
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0  
+        })
+    }, [])
 
     return (
+
         <>
             <div className="h-auto w-full mt-6 relative flex flex-row items-start justify-start">
 
