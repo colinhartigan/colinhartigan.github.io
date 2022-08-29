@@ -88,9 +88,9 @@ function Home(props) {
                                 🡣
                             </p>
                         </div>
-                        <p className="text-center text-md italic">
+                        {/* <p className="text-center text-md italic">
                             scroll for more
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>
