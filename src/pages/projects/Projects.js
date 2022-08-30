@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 import Featured from './components/Featured'
+import Project from './components/Project'
 
 function Projects(props) {
 
@@ -21,6 +22,14 @@ function Projects(props) {
                 </div>
 
                 <Featured />
+
+                <div className="w-[80%] h-[2px] m-10 bg-black self-center"/>
+
+                <div className="w-full h-auto grid grid-cols-3 gap-3 justify-center items-center">
+
+                    <Project />
+
+                </div>
 
             </div>
         </div>
