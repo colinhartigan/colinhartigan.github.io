@@ -54,7 +54,7 @@ function Project(props) {
                 </p>
             </div>
 
-            <div className="min-w-full h-full flex flex-row flex-auto items-stretch justify-center border-black border-l-2 border-r-2 border-b-2">
+            <div className="min-w-full h-auto flex flex-row flex-auto items-stretch justify-center border-black border-l-2 border-r-2 border-b-2">
 
                 <div className="w-[50%] min-h-full p-2 flex flex-col items-center justify-center border-black border-r-2">
                     <p className="text-lg text-center">

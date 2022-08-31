@@ -23,13 +23,17 @@ function Projects(props) {
 
                 <Featured />
 
-                <div className="w-[80%] h-[2px] m-10 bg-black self-center"/>
+                <p className="w-full text-lg mt-16 text-center italic ">
+                    more coming soon
+                </p>
+
+                {/* <div className="w-[80%] h-[2px] m-10 bg-black self-center"/>
 
                 <div className="w-full h-auto grid grid-cols-3 gap-12 justify-center items-center">
 
                     <Project />
 
-                </div>
+                </div> */}
 
             </div>
         </div>
