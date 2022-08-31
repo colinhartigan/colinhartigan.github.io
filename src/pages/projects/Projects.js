@@ -25,7 +25,7 @@ function Projects(props) {
 
                 <div className="w-[80%] h-[2px] m-10 bg-black self-center"/>
 
-                <div className="w-full h-auto grid grid-cols-3 gap-3 justify-center items-center">
+                <div className="w-full h-auto grid grid-cols-3 gap-12 justify-center items-center">
 
                     <Project />
 

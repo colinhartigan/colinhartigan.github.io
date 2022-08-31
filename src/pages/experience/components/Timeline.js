@@ -5,13 +5,24 @@ function Timline(props) {
 
     const data = [
         {
+            org: "Sandy Hill Camp and Retreat Center",
+            title: "counselor",
+            location: "North East, MD",
+            date: "july 2022",
+            content: {
+                description: "As a cabin counselor, I led and managed cabins of 10-12 children during one-week sleep-away camp sessions. Additionally, I taught instructional classes in creative arts, team building, and recreational sports. In collaboration with a co-counselor, I became acquainted with the campers' needs and accomodated them to enhance their camp experience.",
+                tags: ["leadership", "behavior management", "communication"],
+            }
+        },
+
+        {
             org: "Johns Hopkins University Applied Physics Lab",
             title: "ASPIRE intern",
             location: "Laurel, MD",
-            date: "oct. 2020 - may 2021",
+            date: "oct. 2021 - may 2022",
             content: {
-                description: "Working with a team of researches in APL's Research and Exploratory Development Department who use addative manufacturing machinery to append components onto existing circuit boards, I was tasked with creating a tool which visualized the CNC code and its resulting output. Written in Python, my software was able to visualize toolpaths containing 100,000+ actions on an interactive plot. I filed an invention disclosure for the novelty, uniqueness, and utility of my software.",
-                tags: ["python", "invention", "CNC", "visualization", "data parsing and processing", "data structures"],
+                description: "Under the guidance of my mentor, who worked in APL's Space Exploration Sector, I wrote software to parse and aggregate large batches of NASA weather satellite data to train a deep learning model. Given the magnitude of the datasets, I implemented multithreading to scale the efficiency of my software.",
+                tags: ["python", "tensorflow", "data parsing and processing", "multithreading", "csv"],
             }
         },
 
@@ -30,28 +41,18 @@ function Timline(props) {
             org: "Johns Hopkins University Applied Physics Lab",
             title: "ASPIRE intern",
             location: "Laurel, MD",
-            date: "oct. 2021 - may 2022",
+            date: "oct. 2020 - may 2021",
             content: {
-                description: "Under the guidance of my mentor, who worked in APL's Space Exploration Sector, I wrote software to parse and aggregate large batches of NASA weather satellite data to train a deep learning model. Given the magnitude of the datasets, I implemented multithreading to scale the efficiency of my software.",
-                tags: ["python", "tensorflow", "data parsing and processing", "multithreading", "csv"],
+                description: "Working with a team of researches in APL's Research and Exploratory Development Department who use addative manufacturing machinery to append components onto existing circuit boards, I was tasked with creating a tool which visualized the CNC code and its resulting output. Written in Python, my software was able to visualize toolpaths containing 100,000+ actions on an interactive plot. I filed an invention disclosure for the novelty, uniqueness, and utility of my software.",
+                tags: ["python", "invention", "CNC", "visualization", "data parsing and processing", "data structures"],
             }
         },
 
-        {
-            org: "Sandy Hill Camp and Retreat Center",
-            title: "counselor",
-            location: "North East, MD",
-            date: "july 2022",
-            content: {
-                description: "As a cabin counselor, I led and managed cabins of 10-12 children during one-week sleep-away camp sessions. Additionally, I taught instructional classes in creative arts, team building, and recreational sports. In collaboration with a co-counselor, I became acquainted with the campers' needs and accomodated them to enhance their camp experience.",
-                tags: ["leadership", "behavior management", "communication"],
-            }
-        },
     ]
 
     useEffect(() => {
         window.scrollTo({
-            top: 0  
+            top: 0
         })
     }, [])
 
@@ -62,6 +63,10 @@ function Timline(props) {
 
                 {/* <div className="min-h-[100%] absolute grow w-[2px] bg-black">
                 </div> */}
+                <div>
+                    <p className="mt-3 mr-1 text-sm" style={{ writingMode: "vertical-rl" }}>the past →</p>
+                </div>
+
 
                 <div className="w-auto min-h-full flex flex-col justify-between items-start gap-12">
 

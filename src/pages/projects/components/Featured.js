@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import CountUp from 'react-countup';
 
 import Icon from '@mdi/react'
-import { mdiArrowRight, mdiStarOutline, mdiSourceBranch, mdiDownload } from '@mdi/js'
+import { mdiArrowRight, mdiStarOutline, mdiSourceBranch, mdiDownloadOutline } from '@mdi/js'
 
 import demo1 from '../../../assets/featured/demo1.png'
 import demo2 from '../../../assets/featured/demo2.png'
@@ -13,6 +13,8 @@ function Featured(props) {
     const [downloads, setDownloads] = useState(0);
     const [stars, setStars] = useState(0);
     const [forks, setForks] = useState(0);
+
+    const [image, setImage] = useState("");
 
     useEffect(() => {
         var downloads = 0;
@@ -32,15 +34,25 @@ function Featured(props) {
                 setForks(data.forks_count)
             });
 
+        fetch("https://valorant-api.com/v1/bundles")
+            .then(response => response.json())
+            .then(data => {
+                
+                var image = data.data[Math.floor(Math.random()*data.data.length)].displayIcon
+                console.log(image)
+                setImage(image)
+                console.log(image)
+            });
+
     }, [])
 
     return (
 
-        <div className="w-[100%] h-auto border-black border-2 self-center flex flex-col items-start justify-start">
+        <div className="w-[100%] max-w-[100%] h-auto self-center flex flex-col items-start justify-start">
 
-            <div className="w-full flex xl:flex-row flex-col items-stretch justify-center border-b-2 border-black">
+            <div className="min-w-full flex xl:flex-row flex-col items-stretch justify-center">
 
-                <div className="min-h-full xl:w-auto w-full px-4 py-5 xl:border-r-2 xl:border-b-0 border-b-2 border-black flex flex-col justify-center items-start">
+                <div className="min-h-full xl:w-auto w-full px-4 py-5 border-r-2 xl:border-b-2 border-b-2 border-l-2 border-t-2 border-black flex flex-col justify-center items-start">
                     <p className="text-4xl font-medium">
                         valorant-inventory-manager
                     </p>
@@ -48,7 +60,7 @@ function Featured(props) {
 
                 <div className="min-h-full xl:w-auto w-full grow flex flex-row items-stretch justify-center">
 
-                    <div className="min-h-full xl:w-auto w-[50%] px-5 py-2 flex flex-col items-center justify-center border-r-2 border-black">
+                    <div className="min-h-full xl:w-auto w-[50%] px-5 py-2 flex flex-col items-center justify-center xl:border-l-0 border-l-2 border-r-2 xl:border-t-2 border-b-2 border-black">
                         <a href="https://github.com/colinhartigan/valorant-inventory-manager" target="_blank" rel="noreferrer" className="text-lg text-center underline">
                             github
                         </a>
@@ -57,7 +69,7 @@ function Featured(props) {
                         </a>
                     </div>
 
-                    <div className="min-h-full xl:w-auto xl:grow w-[50%] flex flex-row items-center justify-center bg-black">
+                    <div className="min-h-full xl:w-auto xl:grow w-[50%] flex flex-row items-center justify-center bg-black border-black border-2">
                         {/* <p className="text-lg text-white underline flex flex-row justify-center items-center">
                             case study <Icon className="ml-1" path={mdiArrowRight} size={1} />
                         </p> */}
@@ -67,19 +79,21 @@ function Featured(props) {
 
             </div>
 
-            <div className="w-full h-52 flex flex-col justify-center items-center border-black border-b-2 overflow-hidden">
-                <img src={demo1} className="w-[150%] h-auto grayscale blur-sm " alt="bruh" />
+            <div className="relative w-full h-48 flex flex-col justify-center items-center border-black border-2 border-t-0 object-none overflow-hidden">
+                <img src={image} className="absolute w-auto h-auto grayscale object-cover blur-sm" alt="featured project" />
             </div>
 
             <div className="w-full grow flex xl:flex-row flex-col items-stretch justify-evenly">
 
-                <div className="xl:w-full w-full min-h-full flex flex-row items-center justify-center border-b-2 xl:border-b-0 xl:border-r-2 border-black">
+                <div className="xl:w-full w-full min-h-full flex flex-row items-center justify-center">
 
-                    <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-r-2 border-black">
+                    <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-r-2 border-l-2 border-b-2 border-black">
+
+
                         {downloads !== 0 ? <CountUp className="text-3xl text-center" end={downloads} useEasing separator="," duration={6} enableScrollSpy /> : <p className="text-3xl text-center">0</p>}
 
                         <div className="w-full h-auto flex flex-row items-center justify-center">
-                            <Icon path={mdiDownload} size={1} />
+                            <Icon path={mdiDownloadOutline} size={1} />
                             <p className="text-lg ml-1">
                                 downloads
                             </p>
@@ -87,7 +101,7 @@ function Featured(props) {
 
                     </div>
 
-                    <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-r-2 border-black">
+                    <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-r-2 border-b-2 border-black">
                         {stars !== 0 ? <CountUp className="text-3xl text-center" end={stars} useEasing separator="," duration={5} enableScrollSpy /> : <p className="text-3xl text-center">0</p>}
 
                         <div className="w-full h-auto flex flex-row items-center justify-center">
@@ -98,7 +112,7 @@ function Featured(props) {
                         </div>
                     </div>
 
-                    <div className="min-h-full w-full py-4 flex flex-col items-center justify-center">
+                    <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-black border-r-2 border-b-2">
                         {forks !== 0 ? <CountUp className="text-3xl text-center" end={forks} useEasing separator="," duration={4} enableScrollSpy /> : <p className="text-3xl text-center">0</p>}
 
                         <div className="w-full h-auto flex flex-row items-center justify-center">
@@ -109,9 +123,10 @@ function Featured(props) {
                         </div>
                     </div>
 
+
                 </div>
 
-                <div className="xl:w-full w-full min-h-full px-4 py-2 flex flex-col items-center justify-center border-b-2 xl:border-b-0 xl:border-r-2 border-black">
+                <div className="xl:w-full w-full min-h-full px-4 py-2 flex flex-col items-center justify-center border-b-2 xl:border-l-0 border-l-2 border-r-2 border-black">
 
                     <p className="text-3xl text-center">
                         javascript, python
@@ -122,7 +137,7 @@ function Featured(props) {
 
                 </div>
 
-                <div className="w-full min-h-full px-4 py-2 flex flex-col items-center justify-center">
+                <div className="w-full min-h-full px-4 py-2 flex flex-col items-center justify-center border-l-2 xl:border-l-0 border-r-2 border-b-2 border-black">
 
                     <p className="text-3xl text-center">
                         react, websockets, material ui
