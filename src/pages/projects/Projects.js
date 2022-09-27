@@ -69,7 +69,7 @@ function Projects(props) {
 
                 <div className="w-[80%] h-[2px] m-10 bg-black self-center"/>
 
-                <div className="w-full h-min grid xl:grid-cols-3 grid-cols-1 gap-12 justify-center items-start">
+                <div className="w-full h-min grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-12 justify-center items-start">
 
                     {projects.map((project, index) => {
                         const data = project;

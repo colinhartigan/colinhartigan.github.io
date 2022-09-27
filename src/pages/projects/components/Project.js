@@ -77,7 +77,7 @@ function Project(props) {
 
             </div>
 
-            <div className="w-full h-36 flex flex-col items-center justify-start border-black border-l-2 border-r-2 border-b-2">
+            <div className="w-full h-40 flex flex-col items-center justify-start border-black border-l-2 border-r-2 border-b-2">
                 <p className="text-xl p-3">
                     {data.description}
                 </p>
