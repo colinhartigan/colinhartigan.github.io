@@ -18,6 +18,7 @@ function Projects(props) {
             description: "a discord rich presence implementation for VALORANT featuring a full set of art assets and descriptive presence states",
             languages: ["python"],
             technologies: ["webserver, discord API, valorant API"],
+            stats: ["downloads", "stars", "forks"],
         },
         {
             title: "valorant-skin-cli",
@@ -25,6 +26,7 @@ function Projects(props) {
             description: "(predecessor to valorant-inventory-manager) a command line interface for managing a VALORANT inventory with additional features not in the game client",
             languages: ["python"],
             technologies: ["webserver, cli interface, valorant API"],
+            stats: ["downloads", "stars", "forks"],
         },
         {
             title: "ggsheet",
@@ -32,6 +34,23 @@ function Projects(props) {
             description: "a program to generate post-match summary images, similar to the ones used in VALORANT esports competitions",
             languages: ["python"],
             technologies: ["image processing, valorant API"],
+            stats: ["stars", "forks"],
+        },
+        {
+            title: "valclient.py",
+            github: "colinhartigan/valclient.py",
+            description: "a custom API wrapper for VALORANT's hidden client API",
+            languages: ["python"],
+            technologies: ["web requests, valorant API, API wrapper"],
+            stats: ["stars", "forks"],
+        },
+        {
+            title: "arduino-fastled-clock",
+            github: "colinhartigan/arduino-fastled-clock",
+            description: "custom clock code for a 4-digit 7-segment display made from ws2812b LED strips running on an arduino nano",
+            languages: ["C++"],
+            technologies: ["arduino, fastLED"],
+            stats: ["stars", "forks"],
         },
         
     ]
@@ -50,7 +69,7 @@ function Projects(props) {
 
                 <div className="w-[80%] h-[2px] m-10 bg-black self-center"/>
 
-                <div className="w-full h-min grid grid-cols-3 gap-12 justify-center items-start">
+                <div className="w-full h-min grid xl:grid-cols-3 grid-cols-1 gap-12 justify-center items-start">
 
                     {projects.map((project, index) => {
                         const data = project;

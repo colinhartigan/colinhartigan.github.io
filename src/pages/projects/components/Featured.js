@@ -5,9 +5,6 @@ import CountUp from 'react-countup';
 import Icon from '@mdi/react'
 import { mdiArrowRight, mdiStarOutline, mdiSourceBranch, mdiDownloadOutline } from '@mdi/js'
 
-import demo1 from '../../../assets/featured/demo1.png'
-import demo2 from '../../../assets/featured/demo2.png'
-
 function Featured(props) {
 
     const [downloads, setDownloads] = useState(0);
@@ -79,8 +76,8 @@ function Featured(props) {
 
             </div>
 
-            <div className="relative w-full h-48 flex flex-col justify-center items-center border-black border-2 border-t-0 object-none overflow-hidden">
-                <img src={image} className="absolute w-auto h-auto grayscale object-cover blur-sm" alt="featured project" />
+            <div className="relative min-w-full h-48 flex flex-col justify-center items-center border-black border-2 border-t-0 object-none overflow-hidden">
+                <img src={image} className="absolute min-w-full h-auto grayscale object-cover blur-sm" alt="featured project" />
             </div>
 
             <div className="w-full grow flex xl:flex-row flex-col items-stretch justify-evenly">

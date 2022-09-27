@@ -71,10 +71,10 @@ function Home(props) {
 
                         {/* socials */}
                         <div className="flex flex-row align-center justify-center space-x-4 mt-2">
-                            <a href="https://github.com/colinhartigan">
+                            <a href="https://github.com/colinhartigan" target="_blank" rel="noreferrer">
                                 <Icon path={mdiGithub} title="GitHub - colinhartigan" color="black" width={iconSize} height={iconSize} />
                             </a>
-                            <a href="https://www.linkedin.com/in/colin-hartigan/">
+                            <a href="https://www.linkedin.com/in/colin-hartigan/" target="_blank" rel="noreferrer" >
                                 <Icon path={mdiLinkedin} title="LinkedIn - Colin Hartigan" color="black" width={iconSize} height={iconSize} />
                             </a>
                         </div>
