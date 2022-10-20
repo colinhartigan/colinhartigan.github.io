@@ -56,7 +56,7 @@ function Projects(props) {
     ]
 
     return (
-        <div className="h-fit w-2xl max-w-screen-2xl mx-auto flex flex-col items-start justify-start">
+        <div className="h-fit w-2xl max-w-7xl mx-auto flex flex-col items-start justify-start">
             <div className="w-[95%] h-auto grow mx-auto flex flex-col items-start justify-center pt-20 pb-8">
 
                 <div className="w-min border-2 border-black p-2 mb-10 overflow-hidden bg-white">
@@ -69,7 +69,7 @@ function Projects(props) {
 
                 <div className="w-[80%] h-[2px] m-10 bg-black self-center"/>
 
-                <div className="w-full h-min grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-12 justify-center items-start">
+                <div className="w-full h-min grid xl:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-12 justify-center items-start">
 
                     {projects.map((project, index) => {
                         const data = project;

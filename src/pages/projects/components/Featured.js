@@ -89,7 +89,7 @@ function Featured(props) {
 
                         {downloads !== 0 ? <CountUp className="text-3xl text-center" end={downloads} useEasing separator="," duration={6} enableScrollSpy /> : <p className="text-3xl text-center">0</p>}
 
-                        <div className="w-full h-auto flex flex-row items-center justify-center">
+                        <div className="w-full h-auto px-4 flex flex-row items-center justify-center">
                             <Icon path={mdiDownloadOutline} size={1} />
                             <p className="text-lg ml-1">
                                 downloads
