@@ -87,7 +87,7 @@ function Featured(props) {
                     <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-r-2 border-l-2 border-b-2 border-black">
 
 
-                        {downloads !== 0 ? <CountUp className="text-3xl text-center" end={downloads} useEasing separator="," duration={6} enableScrollSpy /> : <p className="text-3xl text-center">0</p>}
+                        {downloads !== 0 ? <CountUp className="text-3xl text-center" end={downloads} useEasing separator="," duration={6} /> : <p className="text-3xl text-center">0</p>}
 
                         <div className="w-full h-auto px-4 flex flex-row items-center justify-center">
                             <Icon path={mdiDownloadOutline} size={1} />
