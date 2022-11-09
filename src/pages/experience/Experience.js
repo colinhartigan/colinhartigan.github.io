@@ -18,8 +18,8 @@ function Experience(props) {
                         EXPERIENCE
                     </p>
                 </div>
-                {/* <Timeline /> */}
-                <NewTimeline />
+                <Timeline />
+                {/* <NewTimeline /> */}
             </div>
         </div>
     )
