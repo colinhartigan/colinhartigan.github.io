@@ -99,7 +99,7 @@ function Featured(props) {
                     </div>
 
                     <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-r-2 border-b-2 border-black">
-                        {stars !== 0 ? <CountUp className="text-3xl text-center" end={stars} useEasing separator="," duration={5} enableScrollSpy /> : <p className="text-3xl text-center">0</p>}
+                        {stars !== 0 ? <CountUp className="text-3xl text-center" end={stars} useEasing separator="," duration={5} /> : <p className="text-3xl text-center">0</p>}
 
                         <div className="w-full h-auto flex flex-row items-center justify-center">
                             <Icon path={mdiStarOutline} size={1} />
@@ -110,7 +110,7 @@ function Featured(props) {
                     </div>
 
                     <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-black border-r-2 border-b-2">
-                        {forks !== 0 ? <CountUp className="text-3xl text-center" end={forks} useEasing separator="," duration={4} enableScrollSpy /> : <p className="text-3xl text-center">0</p>}
+                        {forks !== 0 ? <CountUp className="text-3xl text-center" end={forks} useEasing separator="," duration={4} /> : <p className="text-3xl text-center">0</p>}
 
                         <div className="w-full h-auto flex flex-row items-center justify-center">
                             <Icon path={mdiSourceBranch} size={1} />
