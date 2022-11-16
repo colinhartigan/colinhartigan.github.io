@@ -42,7 +42,6 @@ function Header(props) {
                         </Link>
                     </div>
 
-
                     <div className="w-full h-full m-auto flex grow bg-black" />
 
                     <div className="visible lg:hidden flex flex-col items-center justify-center px-2 py-1 w-auto h-auto cursor-pointer">

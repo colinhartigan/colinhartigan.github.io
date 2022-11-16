@@ -105,9 +105,12 @@ function Home(props) {
                                 </p>
                             </div>
                             <div className="w-8/12 text-2xl border-2 border-black p-2 bg-white">
-                                <p className=" text-left h-full">
+                                <span className="text-left h-full text-2xl">
                                     My name is Colin, and I am a computer engineering student from Maryland. I'm an avid programmer and tinkerer.
-                                </p>
+                                </span>
+                                <span className="text-lect h-auto ml-2 text-2xl underline">
+                                    <a href="">read more</a>
+                                </span>
                             </div>
                         </div>
                         <div className="absolute top-0 pt-8 w-auto h-full z-0">

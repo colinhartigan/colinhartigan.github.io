@@ -125,7 +125,7 @@ function Featured(props) {
 
                 <div className="xl:w-full w-full min-h-full px-4 py-2 flex flex-col items-center justify-center border-b-2 xl:border-l-0 border-l-2 border-r-2 border-black">
 
-                    <p className="text-3xl text-center">
+                    <p className="text-3xl text-center m-auto">
                         javascript, python, html
                     </p>
                     <p className="text-lg">
@@ -136,7 +136,7 @@ function Featured(props) {
 
                 <div className="w-full min-h-full px-4 py-2 flex flex-col items-center justify-center border-l-2 xl:border-l-0 border-r-2 border-b-2 border-black">
 
-                    <p className="text-3xl text-center">
+                    <p className="text-3xl text-center m-auto">
                         react, websockets, material ui
                     </p>
                     <p className="text-lg">
