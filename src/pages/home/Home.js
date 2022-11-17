@@ -53,7 +53,7 @@ function Home(props) {
                     <div className="absolute w-auto h-auto flex flex-col items-center justify-center">
                         <div className="p-2 flex flex-col align-center justify-center ">
                             <div className="border-2 border-black p-3 overflow-hidden" >
-                                <p className="text-5xl font-medium h-full bg-clip-text text-transparent text-center" style={{ backgroundImage: `url(${namebg})`, }}>
+                                <p className="text-5xl font-medium h-full bg-clip-text text-transparent text-left" style={{ backgroundImage: `url(${namebg})`, }}>
                                     COLIN HARTIGAN
                                 </p>
                             </div>

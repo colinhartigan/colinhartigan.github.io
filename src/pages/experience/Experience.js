@@ -98,12 +98,15 @@ function Experience(props) {
         if(searchParams.get('id') !== null){
             var id = searchParams.get('id')
             if (id < data.length) {
-                selectExperience(id, data[id])
+                setSelectedJob(data[id])
             } else {
                 setRedir(true)
             }
+        } else {
+            setSelectedJob(null)
+            setRedir(false)
         }
-    }, [])
+    }, [searchParams])
 
     return (
         <>
