@@ -12,7 +12,7 @@ function Header(props) {
 
     return (
         <>
-            <div className="fixed z-50 h-12 w-full bg-white border-black border-b-2 overflow-hidden mr-12">
+            <div className="fixed z-40 h-12 w-full bg-white border-black border-b-2 overflow-hidden mr-12">
                 <div className="w-full h-full m-auto flex flex-row justify-start items-center ">
                     <div className="hidden lg:visible w-auto h-full lg:flex flex-row items-stretch justify-center">
                         <Link to="/home" className="w-auto min-h-full px-6 flex flex-col justify-center items-center border-black border-t-2 border-l-2">

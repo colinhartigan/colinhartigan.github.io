@@ -49,6 +49,7 @@ function Home(props) {
         <>
             <div className="w-[80%] h-auto max-w-screen-2xl mx-auto">
                 <div className="h-screen mx-auto flex flex-col items-center justify-center">
+
                     <div className="absolute w-auto h-auto flex flex-col items-center justify-center">
                         <div className="p-2 flex flex-col align-center justify-center ">
                             <div className="border-2 border-black p-3 overflow-hidden" >
@@ -56,7 +57,7 @@ function Home(props) {
                                     COLIN HARTIGAN
                                 </p>
                             </div>
-                            <div className="flex flex-row align-center justify-center max-h-full">
+                            <div className="flex flex-row align-center justify-center">
                                 <p className="text-2xl border-2 border-black border-t-0 py-2 px-4 font-medium text-center">
                                     MD 🡢 ATL
                                 </p>
