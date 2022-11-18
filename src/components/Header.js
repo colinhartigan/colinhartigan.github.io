@@ -43,6 +43,11 @@ function Header(props) {
         <>
             <div className="fixed z-40 h-12 w-full bg-white border-black border-b-2 overflow-hidden mr-12">
                 <div className="w-full h-full m-auto flex flex-row justify-start items-center ">
+                    <div className="min-w-[48px] max-w-[48px] min-h-full pb-1.5 flex flex-row justify-center items-center bg-black border-black border-t-2">
+                        <p className="min-w-full text-center text-white text-2xl font-semibold leading-none" title="semicolin (haha get it)">
+                            ;
+                        </p>
+                    </div>
                     <div className="hidden lg:visible w-auto h-full lg:flex flex-row items-stretch justify-center">
                         {menu.map((item, index) => {
                             return (

@@ -77,13 +77,13 @@ function Project(props) {
 
             </div>
 
-            <div className="w-full h-32 flex flex-col items-start justify-start border-black border-l-2 border-r-2 border-b-2">
-                <p className="text-xl p-3 text-left">
+            <div className="w-full h-[138px] p-3 flex flex-col items-start justify-start border-black border-l-2 border-r-2 border-b-2">
+                <p className="h-full text-xl text-left">
                     {data.description}
                 </p>
             </div>
 
-            <div className="min-w-full h-20 flex flex-row flex-auto items-stretch justify-center border-black border-l-2 border-r-2 border-b-2">
+            <div className="min-w-full h-auto flex flex-row flex-auto items-stretch justify-center border-black border-l-2 border-r-2 border-b-2">
 
                 <div className="w-[30%] min-h-full p-2 flex flex-col items-center justify-center border-black border-r-2">
                     <p className="text-lg text-center">

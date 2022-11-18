@@ -23,7 +23,7 @@ function Projects(props) {
         {
             title: "valorant-skin-cli",
             github: "colinhartigan/valorant-skin-cli",
-            description: "(predecessor to valorant-inventory-manager) a command line interface for managing a VALORANT inventory with additional features not in the game client",
+            description: "(predecessor to valorant-inventory-manager, archived) a command line interface for managing a VALORANT inventory with additional features not in the game client",
             languages: ["python"],
             technologies: ["webserver, cli interface, valorant API"],
             stats: ["downloads", "stars", "forks"],
