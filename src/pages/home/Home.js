@@ -82,21 +82,29 @@ function Home(props) {
                     </div>
 
 
-                    <div className="h-[25vh] mt-[75vh]">
-                        <div className="h-auto overflow-hidden">
+                    <div className="h-[25vh] mt-[70vh]">
+                        {/* <div className="h-auto overflow-hidden">
                             <div className="overflow-hidden h-auto">
                                 <p className="h-auto text-center text-2xl animate-arrowPeriodic overflow-hidden">
                                     🡣
                                 </p>
                             </div>
-                            {/* <p className="text-center text-md italic">
-                            scroll for more
-                        </p> */}
+                        </div> */}
+                        <div className="w-full h-auto flex flex-row items-center justify-center gap-6">
+                            <Link to="/about" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
+                                about me
+                            </Link>
+                            <Link to="/experience" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
+                                experience
+                            </Link>
+                            <Link to="/projects" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
+                                projects
+                            </Link>
                         </div>
                     </div>
                 </div>
 
-                <div className="xl:h-screen h-[200vh] w-full mx-auto xl pb-7 pt-20 flex flex-col items-start justify-start">
+                {/* <div className="xl:h-screen h-[200vh] w-full mx-auto xl pb-7 pt-20 flex flex-col items-start justify-start">
 
                     <div className="relative h-full xl:h-[50%]">
                         <div className="relative flex flex-col items-start h-auto z-10 pl-8">
@@ -110,7 +118,7 @@ function Home(props) {
                                     My name is Colin, and I am a computer engineering student from Maryland. I'm an avid programmer and tinkerer.
                                 </span>
                                 <span className="text-lect h-auto ml-2 text-2xl underline">
-                                    <a href="">read more</a>
+                                    <a href="/#/about">read more</a>
                                 </span>
                             </div>
                         </div>
@@ -143,9 +151,9 @@ function Home(props) {
                             <img className="h-full w-auto object-contain z-0" src="https://www.exploregeorgia.org/sites/default/files/legacy_images/TechTowerSign.jpg" alt="thing" />
                         </div>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="h-screen mx-auto pb-7 pt-20 flex flex-col items-center justify-center">
+                {/* <div className="h-screen mx-auto pb-7 pt-20 flex flex-col items-center justify-center">
                     <p className="text-2xl">
                         discover more
                     </p>
@@ -157,7 +165,7 @@ function Home(props) {
                             projects
                         </Link>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
 

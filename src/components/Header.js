@@ -16,6 +16,10 @@ function Header(props) {
             link: "/home"
         },
         {
+            name: "about",
+            link: "/about",
+        },
+        {
             name: "experience",
             link: "/experience"
         },
@@ -24,11 +28,6 @@ function Header(props) {
             link: "/projects",
             divider: true
         },
-        // {
-        //     name: "about",
-        //     link: "/about",
-        //     divider: true,
-        // },
         {
             name: "contact",
             link: "/contact"

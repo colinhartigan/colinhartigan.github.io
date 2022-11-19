@@ -6,6 +6,7 @@ import Experience from './pages/experience/Experience.js'
 import Projects from './pages/projects/Projects.js';
 import Resume from './pages/resume/Resume.js';
 import Contact from './pages/contact/Contact.js';
+import About from './pages/about/About.js';
 
 import Header from './components/Header';
 import NotFound from './pages/notFound/NotFound.js';
@@ -19,6 +20,7 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Navigate to="/home" />} />
                     <Route path="/home" element={<Home />} />
+                    <Route path="/about" element={<About/>} />
                     <Route path="/experience" element={<Experience />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/resume" element={<Resume />} />
