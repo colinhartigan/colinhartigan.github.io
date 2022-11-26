@@ -9,10 +9,10 @@ Minimum of 7 images, photos, visuals, graphics, logos
 - Images taken from other sources should be cited (include some sort of acknowledgement/credit such as a URL, name, reference, citation, etc.)
 - Visuals should be sized appropriately, cropped, and formatted effectively
 
-Bio
+Bio (DONE)
 Bio or “About Me” building upon your elevator pitch video to create a bio video/summary that tells your backstory and who you are.
 
-Summary/Objective/Power Pitch
+Summary/Objective/Power Pitch - ADD TO EXPERIENCE PAGE
 Summary/Objective/Power Pitch statement (short paragraph or 3-4 sentences/bullets) that is focused more towards your end-user and what you bring to the table.
 - A clear, concise vision/purpose/value proposition statement that says is a shorter, tighter version of your video
 - How to contact you
@@ -20,7 +20,7 @@ Summary/Objective/Power Pitch statement (short paragraph or 3-4 sentences/bullet
 Resume (DONE)
 Resume (comprehensive and/or 1-page, ECE Career Fair version) that is easy to view and download
 
-Career Goals
+Career Goals - ADD TO EXPERIENCE PAGE
 Career Goals describing long-term career aspirations and what steps are planned to take to achieve these goals (building on ECE Roadmap)
 - Time line (dates, length of time to achieve milestones)
 - Budget (cost of additional degrees, expenses associated with reaching goals)
@@ -32,7 +32,7 @@ Showcase your Individual Discovery Project
 - Include images/photos/visuals/graphics
 - Optional: Presentation or video that showcases the project
 
-Featured Skills
+Featured Skills (DONE)
 Combination of skills highlighted
 - 3 technical skills
 - 2 essential skills

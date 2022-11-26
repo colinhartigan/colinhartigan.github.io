@@ -47,7 +47,7 @@ function About(props) {
             num: "1552",
             year: "",
             title: "Integral Calculus",
-            desc: "Differential calculus including applications and the underlying theory of limits for functions and sequences."
+            desc: "Definite and indefinite integrals, techniques of integration, improper integrals, infinite series, applications. "
         },
         {
             dept: "MATH",
@@ -58,15 +58,85 @@ function About(props) {
         },
     ]
 
+    const skills = [
+        {
+            name: "languages",
+            data: [
+                {
+                    name: "python",
+                    desc: "experience with flask, tensorflow, websockets",
+                },
+                {
+                    name: "javascript",
+                    desc: "experience with react, node, socket.io",
+                },
+                {
+                    name: "HTML/CSS",
+                    desc: "mostly in conjunction with React",
+                },
+                {
+                    name: "lua",
+                    desc: "ROBLOX's RBX.Lua",
+                },
+                {
+                    name: "c++",
+                    desc: "arduino",
+                },
+                {
+                    name: "c",
+                    desc: "basic c: memory management, pointers, etc.",
+                }
+            ],
+        },
+        {
+            name: "software",
+            data: [
+                {
+                    name: "visual studio code",
+                    desc: "my go-to IDE"
+                },
+                {
+                    name: "git/github",
+                },
+                {
+                    name: "arduino IDE",
+                },
+                {
+                    name: "fusion 360",
+                    desc: "basic 3D modeling",
+                },
+                {
+                    name: "microsoft office suite",
+                },
+                {
+                    name: "google drive suite",
+                }
+            ],
+        },
+        {
+            name: "hardware",
+            data: [
+                {
+                    name: "raspberry pi",
+                },
+                {
+                    name: "arduino",
+                },
+                {
+                    name: "esp32",
+                    desc: "micropython and c++",
+                },
+                {
+                    name: "breadboard circuits",
+                    desc: "basic electronics integrating ICs, basic circuit components"
+                }
+            ],
+        }
+    ]
+
     return (
         <div className="h-fit w-2xl max-w-7xl mx-auto flex flex-col items-start justify-start">
             <div className="w-[95%] h-auto grow mx-auto flex flex-col items-start justify-center pt-20 pb-8">
-
-                <div className="w-auto border-2 border-black p-2 mb-10 overflow-hidden bg-white">
-                    <p className="text-5xl h-full">
-                        ABOUT ME
-                    </p>
-                </div>
 
                 {/* 
                     - brief introduction text w/ images 
@@ -89,7 +159,7 @@ function About(props) {
                         <div className="w-auto h-auto bg-white border-black border-2 border-l-0 flex lg:flex-row flex-col items-center justify-start">
                             <div className="h-full p-3">
                                 <p className="text-2xl">
-                                    tinkerer, programmer, music enjoyer, urbanism enthusiast, etc
+                                    tinkerer, programmer, music enjoyer, etc
                                 </p>
                             </div>
                             {/* <div className="h-full p-3 border-black">
@@ -102,15 +172,15 @@ function About(props) {
                     </div>
                 </div>
 
-                <div className="relative w-full h-auto flex flex-col items-start justify-start mt-6">
+                {/* <div className="relative w-full h-auto flex flex-col items-start justify-start mt-6">
                     <p className="text-2xl">
                         table of contents
                     </p>
-                </div>
+                </div> */}
 
 
 
-                <div className="w-full h-auto flex flex-col overflow-hidden items-start justify-center mt-6">
+                <div className="w-full h-auto flex flex-col overflow-hidden items-start justify-center mt-12">
                     <div className="w-full h-auto mb-4">
                         <p className="text-4xl">
                             education
@@ -144,7 +214,7 @@ function About(props) {
                     <div className="w-full h-auto flex flex-col p-3 justify-start items-start mt-4">
                         <div className="w-full grid grid-cols-3 gap-0">
                             <p className="grow text-2xl text-center">
-                                year
+                                expected graduation
                             </p>
                             <p className="grow text-2xl text-center">
                                 major
@@ -155,7 +225,7 @@ function About(props) {
                         </div>
                         <div className="w-full grid grid-cols-3 gap-0 mt-2">
                             <p className="grow text-xl text-center">
-                                1
+                                spring 2026
                             </p>
                             <p className="grow text-xl text-center">
                                 computer engineering
@@ -167,12 +237,16 @@ function About(props) {
                     </div>
 
                     <div className="w-full h-auto flex-col justify-start items-center mt-4">
-                        <div className="w-full h-auto flex-col justify-start items-start">
-                            <p className="text-3xl">
-                                notable coursework
-                            </p>
-                        </div>
                         <div className="w-auto h-auto flex flex-col border-2 border-black">
+
+                            <div className="w-full h-auto flex flex-row justify-start items-stretch">
+                                <div className="w-auto h-auto flex flex-col items-start justify-start p-3 border-black border-r-2 border-b-2">
+                                    <p className="text-3xl">
+                                        notable coursework
+                                    </p>
+                                </div>
+                                <div className="flex grow bg-black" />
+                            </div>
 
                             {courses.map((course, index) => {
                                 return (
@@ -200,7 +274,7 @@ function About(props) {
                     {/* <div className="w-full h-auto flex-col justify-start items-center mt-4">
                         <div className="w-full h-auto flex-col justify-start items-start">
                             <p className="text-3xl">
-                                extracurriculars/clubs
+                                the hive (coming soon)
                             </p>
                         </div>
                     </div> */}
@@ -209,7 +283,72 @@ function About(props) {
 
 
 
-                <div className="w-full h-auto flex flex-col items-start justify-center mt-48">
+                <div className="w-full h-auto flex flex-col items-start justify-center mt-12">
+                    <div className="w-full h-auto mb-4">
+                        <p className="text-4xl">
+                            skills
+                        </p>
+                        <div className="w-full h-[2px] bg-black mt-2" />
+                    </div>
+
+                    {/* 
+
+                        software
+                            - vscode
+                            - git
+                            - 
+
+                        hardware
+                            - arduino
+                            - raspberry pi
+                            - esp32
+                    */}
+
+                    <div className="w-full h-auto flex flex-col items-start justify-start mt-4">
+
+                        <div className="w-full h-auto grid grid-cols-3 gap-12">
+
+                            {skills.map((skill, index) => {
+                                return (
+                                    <div className="w-full h-auto flex flex-col items-start justify-start border-black border-2">
+                                        <div className="w-full h-auto flex shrink flex-row items-stretch justify-start border-black border-b-2">
+                                            <p className="text-3xl p-3">
+                                                {skill.name}
+                                            </p>
+                                            <div className="flex grow bg-black" />
+                                        </div>
+
+                                        <div className="w-full h-auto grow flex flex-col items-start justify-start">
+                                            {
+                                                skill.data.map((item, index) => {
+                                                    return (
+                                                        <div className="w-full h-auto p-3 flex flex-col items-start justify-start">
+                                                            <p className="text-2xl">
+                                                                {item.name}
+                                                            </p>
+                                                            {item.desc !== undefined ?
+                                                                <p className="text-xl ml-4 italic">
+                                                                    {item.desc}
+                                                                </p>
+                                                                : null}
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+
+                                    </div>
+                                )
+                            })}
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div className="w-full h-auto flex flex-col items-start justify-center mt-12">
                     <div className="w-full h-auto mb-4">
                         <p className="text-4xl">
                             bio (kinda)

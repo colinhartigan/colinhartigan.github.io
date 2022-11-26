@@ -10,6 +10,7 @@ import About from './pages/about/About.js';
 
 import Header from './components/Header';
 import NotFound from './pages/notFound/NotFound.js';
+import ECEproject from './pages/ECEproject/ECEproject.js';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/about" element={<About/>} />
                     <Route path="/experience" element={<Experience />} />
                     <Route path="/projects" element={<Projects />} />
+                    <Route path="/ece1100" element={<ECEproject/>} />
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/contact" element={<Contact />} />
 

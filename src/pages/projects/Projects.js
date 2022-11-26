@@ -1,13 +1,14 @@
 import { useEffect } from 'react';
 
-import Featured from './components/Featured'
+import FeaturedVAL from './components/Featured_VAL'
+import FeaturedECE from './components/Featured_ECE'
 import Project from './components/Project'
 
 function Projects(props) {
 
     useEffect(() => {
         window.scrollTo({
-            top: 0  
+            top: 0
         })
     })
 
@@ -52,7 +53,7 @@ function Projects(props) {
             technologies: ["arduino, fastLED"],
             stats: ["stars", "forks"],
         },
-        
+
     ]
 
     return (
@@ -65,15 +66,18 @@ function Projects(props) {
                     </p>
                 </div>
 
-                <Featured />
+                <div className="w-full h-auto flex flex-col items-center justify-center gap-12">
+                    <FeaturedECE />
+                    <FeaturedVAL />
+                </div>
 
-                <div className="w-[80%] h-[2px] m-10 bg-black self-center"/>
+                <div className="w-[80%] h-[2px] m-10 bg-black self-center" />
 
                 <div className="w-full h-min grid xl:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-12 justify-center items-start">
 
                     {projects.map((project, index) => {
                         const data = project;
-                        return <Project data={data}/>
+                        return <Project data={data} />
                     })}
 
                 </div>
