@@ -1,7 +1,15 @@
+import { useEffect } from "react"
+
 import bg from "../../assets/background.png"
 import skyline from "../../assets/skyline.jpg"
 
 function About(props) {
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0
+        })
+    })
 
     const dialogs = [
         {

@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import FullScreenPreview from '../../components/FullScreenPreview';
 
+import naturebg from '../../assets/naturebg.png'
+
 import textScrollVideo from '../../assets/ece1100/textScroll.mp4';
 import pixelArt from '../../assets/ece1100/pixelArt.png';
 import multiScrollTear from '../../assets/ece1100/multiScrollTear.mp4';
@@ -13,7 +15,7 @@ function Media(props) {
 
     const src = props.src;
     const isImage = props.isImage !== undefined ? props.isImage : false;
-    const alt = props.alt !== undefined ? props.alt : "media";
+    const alt = props.alt !== undefined ? props.alt : "media missing";
     const desc = props.desc
 
     const previewCallback = props.openPreview
@@ -78,15 +80,28 @@ function ECEproject(props) {
         setPreviewOpen(true)
     }
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0
+        })
+    })
+
     return (
         <>
             <FullScreenPreview img={previewImage} desc={previewDescription} open={previewOpen} close={() => { setPreviewOpen(false) }} />
             <div className="h-fit w-2xl max-w-7xl mx-auto flex flex-col items-start justify-start">
                 <div className="w-[95%] h-auto grow mx-auto flex flex-col items-start justify-center pt-20 pb-8">
 
+                    <div className="w-full h-auto mb-3">
+                        <a className="text-md underline cursor-pointer" href="/#/projects">
+                            🠔 return to projects
+                        </a>
+                    </div>
+
+
                     <div className="relative w-full h-auto overflow-hidden flex flex-col items-center justify-center border-2 border-black">
                         <div className="absolute w-full h-full">
-                            <img className="grayscale" src={null} alt="thing" />
+                            <img className="grayscale" src={naturebg} alt="thing" />
                         </div>
 
                         <div className="relative w-full h-auto flex flex-col items-start justify-start pb-12 ">
@@ -188,7 +203,7 @@ function ECEproject(props) {
 
                             <div className="w-full h-auto flex flex-row items-start justify-center gap-3 p-3">
                                 <div className="w-auto h-auto flex flex-row items-stretch justify-center gap-3">
-                                    <Media src={stockExperiment} desc="experiment for a stock ticker app. it's not very visually appealing when you barely have room for 3 lines of text" />
+                                    <Media src={stockExperiment} desc="experiment for a stock ticker app. it's not very visually appealing when there's barely enough room for 3 lines of text" />
                                     <Media src={flashTest} desc="side-quest to flash myself in real life when I get flashed in VALORANT" />
                                 </div>
                                 <div className="w-full h-auto">
@@ -246,12 +261,32 @@ function ECEproject(props) {
                             <div className="w-full h-[2px] bg-black mt-2" />
                         </div>
 
-                        <div className="w-full h-auto flex flex-col items-start justify-center mt-4 gap-3">
+                        <div className="w-full h-auto flex flex-row items-start justify-center mt-4 gap-3">
+
+                            <div className="w-auto h-auto flex flex-row items-stretch justify-center gap-3">
+                                <Media src={null} isImage desc="rainy condition with heavy rain" openPreview={setPreview} />
+                                <Media src={null} isImage desc="rainy condition with light rain" openPreview={setPreview} />
+
+                            </div>
+
                             <div className="w-auto h-auto flex flex-col items-start justify-start">
                                 <p className="text-xl">
                                     OpenWeatherMap provides descriptors for seven distinct weather conditions, so I programmed a unique animation for each condition with a variant for day and night. Additionally, OpenWeatherMap provides parameters for certain conditions, such as the rain amount, wind strength, and fog density. I use these parameters to make the condition animations responsive and dynamic.
                                 </p>
                             </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div className="w-full h-auto mt-6">
+
+                        <div className="w-full h-auto mb-4">
+                            <p className="text-4xl">
+                                demos
+                            </p>
+                            <div className="w-full h-[2px] bg-black mt-2" />
                         </div>
 
                         <div className="w-3/4 h-auto flex flex-col items-start justify-center mx-auto mt-4">
@@ -284,14 +319,18 @@ function ECEproject(props) {
                                             </p>
                                         </div>
                                         <div className="w-full h-auto p-3 col-span-2 border-black border-r-2">
-                                            <p className="text-2xl">
-                                                
-                                            </p>
+                                            {condition.day === undefined ?
+                                                <p className="text-lg text-center italic">
+                                                    coming soon
+                                                </p>
+                                                : null}
                                         </div>
                                         <div className="w-full h-auto p-3 col-span-2 border-black">
-                                            <p className="text-2xl">
-                                                
-                                            </p>
+                                            {condition.day === undefined ?
+                                                <p className="text-lg text-center italic">
+                                                    coming soon
+                                                </p>
+                                                : null}
                                         </div>
                                     </div>
                                 )
