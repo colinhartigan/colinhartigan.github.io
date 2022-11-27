@@ -10,7 +10,7 @@ function Projects(props) {
         window.scrollTo({
             top: 0
         })
-    })
+    }, [])
 
     const projects = [
         {

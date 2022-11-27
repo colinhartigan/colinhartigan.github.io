@@ -43,7 +43,7 @@ function Home(props) {
         window.scrollTo({
             top: 0
         })
-    })
+    }, [])
 
     return (
         <>

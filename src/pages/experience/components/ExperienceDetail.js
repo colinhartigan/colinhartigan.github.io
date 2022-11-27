@@ -16,7 +16,7 @@ function ExperienceDetail(props) {
     return (
         <>
             <FullScreenPreview img={previewImage} desc={previewDescription} open={previewOpen} close={() => { setPreviewOpen(false) }} />
-            <div className="h-auto min-w-lg max-w-5xl mx-auto flex flex-col items-start justify-start overflow-auto">
+            <div className="h-auto min-w-lg max-w-6xl mx-auto flex flex-col items-start justify-start overflow-auto">
                 <div className="w-[95%] h-auto grow mx-auto flex flex-col items-start justify-center pt-20 pb-8">
 
                     <div className="w-full h-auto mb-3">

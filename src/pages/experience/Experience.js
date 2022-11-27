@@ -15,7 +15,7 @@ function Experience(props) {
         window.scrollTo({
             top: 0
         })
-    })
+    }, [])
 
     const data = [
         {

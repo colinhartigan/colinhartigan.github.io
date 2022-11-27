@@ -9,7 +9,7 @@ function About(props) {
         window.scrollTo({
             top: 0
         })
-    })
+    }, [])
 
     const dialogs = [
         {
@@ -221,13 +221,13 @@ function About(props) {
 
                     <div className="w-full h-auto flex flex-col p-3 justify-start items-start mt-4">
                         <div className="w-full grid grid-cols-3 gap-0">
-                            <p className="grow text-2xl text-center">
+                            <p className="grow text-2xl text-center font-semibold">
                                 expected graduation
                             </p>
-                            <p className="grow text-2xl text-center">
+                            <p className="grow text-2xl text-center font-semibold">
                                 major
                             </p>
-                            <p className="grow text-2xl text-center">
+                            <p className="grow text-2xl text-center font-semibold">
                                 threads (concentration)
                             </p>
                         </div>

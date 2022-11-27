@@ -84,12 +84,12 @@ function ECEproject(props) {
         window.scrollTo({
             top: 0
         })
-    })
+    }, [])
 
     return (
         <>
             <FullScreenPreview img={previewImage} desc={previewDescription} open={previewOpen} close={() => { setPreviewOpen(false) }} />
-            <div className="h-fit w-2xl max-w-7xl mx-auto flex flex-col items-start justify-start">
+            <div className="h-fit w-2xl max-w-6xl mx-auto flex flex-col items-start justify-start">
                 <div className="w-[95%] h-auto grow mx-auto flex flex-col items-start justify-center pt-20 pb-8">
 
                     <div className="w-full h-auto mb-3">
@@ -106,16 +106,25 @@ function ECEproject(props) {
 
                         <div className="relative w-full h-auto flex flex-col items-start justify-start pb-12 ">
                             <div className="w-auto p-3 bg-white border-black border-r-2">
-                                <p className="text-5xl">
+                                <a href="https://github.com/colinhartigan/weathermat" target="_blank" rel="noreferrer" className="text-5xl underline decoration-2">
                                     weathermat
-                                </p>
+                                </a>
                             </div>
-                            <div className="w-auto h-auto bg-white border-black border-2 border-l-0 flex lg:flex-row flex-col items-center justify-start">
-                                <div className="h-full p-3">
-                                    <p className="text-2xl">
-                                        a dynamic live weather display
-                                    </p>
+                            <div className="w-auto h-auto flex flex-row items-start justify-start">
+                                <div className="w-auto h-auto bg-white border-black border-2 border-l-0 flex lg:flex-row flex-col items-center justify-start">
+                                    <div className="h-full p-3">
+                                        <p className="text-2xl">
+                                            a dynamic live weather display
+                                        </p>
+                                    </div>
                                 </div>
+                                <div className="w-auto h-auto bg-white border-black border-2 border-l-0 flex lg:flex-row flex-col items-center justify-start">
+                                    <div className="h-full p-3">
+                                        <p className="text-2xl">
+                                            micropython on ESP32
+                                        </p>
+                                    </div>
+                                </div>  
                             </div>
                         </div>
                     </div>
@@ -204,7 +213,7 @@ function ECEproject(props) {
                             <div className="w-full h-auto flex flex-row items-start justify-center gap-3 p-3">
                                 <div className="w-auto h-auto flex flex-row items-stretch justify-center gap-3">
                                     <Media src={stockExperiment} desc="experiment for a stock ticker app. it's not very visually appealing when there's barely enough room for 3 lines of text" />
-                                    <Media src={flashTest} desc="side-quest to flash myself in real life when I get flashed in VALORANT" />
+                                    <Media src={flashTest} desc="side-quest to flash myself in real life when I get flashed in VALORANT with the LED matrix (the LEDs get surprisingly bright)" />
                                 </div>
                                 <div className="w-full h-auto">
                                     <p className="text-xl">
