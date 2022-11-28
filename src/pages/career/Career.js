@@ -85,7 +85,7 @@ function Experience(props) {
 
     function selectExperience(id, job) {
         setSelectedJob(job)
-        setSearchParams({'id': id})
+        setSearchParams({ 'id': id })
     }
 
     function closeExperience() {
@@ -95,7 +95,7 @@ function Experience(props) {
     }
 
     useEffect(() => {
-        if(searchParams.get('id') !== null){
+        if (searchParams.get('id') !== null) {
             var id = searchParams.get('id')
             if (id < data.length) {
                 setSelectedJob(data[id])
@@ -112,17 +112,32 @@ function Experience(props) {
         <>
             {redir === true ? <Navigate to={"/lost"} /> : null}
             {selectedJob !== null ?
-                <ExperienceDetail close={closeExperience} data={selectedJob}/>
+                <ExperienceDetail close={closeExperience} data={selectedJob} />
                 :
-                
+
                 <div className="h-auto min-w-lg max-w-7xl mx-auto flex flex-col items-start justify-start">
                     <div className="w-[95%] h-auto grow mx-auto flex flex-col items-start justify-center pt-20 pb-8">
                         <div className="w-min border-2 border-black p-2 overflow-hidden bg-white">
                             <p className="text-5xl h-full">
-                                EXPERIENCE
+                                CAREER
                             </p>
                         </div>
-                        <NewTimeline data={data} callback={selectExperience}/>
+
+                        <div className="w-full h-auto flex flex-col items-start justify-start mt-6">
+
+                            <p className="text-3xl mb-1">
+                                current objective
+                            </p>
+                            <div className="w-full h-auto flex flex-col items-start justify-start p-3 border-black border-2">
+                                <p className="text-2xl">
+                                    I am a self-driven and resourceful computer engineering major with professional experience in collaborative fast-paced
+                                    environments as a programmer. I am also a solo full-stack developer, creating applications with over 200,000 total downloads.
+                                    I am seeking a software engineering internship for May - August 2022.
+                                </p>
+                            </div>
+                        </div>
+
+                        <NewTimeline data={data} callback={selectExperience} />
                     </div>
                 </div>
             }

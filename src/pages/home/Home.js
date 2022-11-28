@@ -94,8 +94,8 @@ function Home(props) {
                             <Link to="/about" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
                                 about me
                             </Link>
-                            <Link to="/experience" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
-                                experience
+                            <Link to="/career" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
+                                career
                             </Link>
                             <Link to="/projects" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
                                 projects

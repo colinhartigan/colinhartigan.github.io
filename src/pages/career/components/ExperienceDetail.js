@@ -21,7 +21,7 @@ function ExperienceDetail(props) {
 
                     <div className="w-full h-auto mb-3">
                         <p className="text-md underline cursor-pointer" onClick={close}>
-                            🠔 return to experience
+                            🠔 return to career
                         </p>
                     </div>
 

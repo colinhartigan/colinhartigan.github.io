@@ -245,10 +245,10 @@ function About(props) {
                     </div>
 
                     <div className="w-full h-auto flex-col justify-start items-center mt-4">
-                        <div className="w-auto h-auto flex flex-col border-2 border-black">
+                        <div className="w-auto h-auto flex flex-col">
 
                             <div className="w-full h-auto flex flex-row justify-start items-stretch">
-                                <div className="w-auto h-auto flex flex-col items-start justify-start p-3 border-black border-r-2 border-b-2">
+                                <div className="w-auto h-auto flex flex-col items-start justify-start p-3 border-black border-2">
                                     <p className="text-3xl">
                                         notable coursework
                                     </p>
@@ -258,7 +258,7 @@ function About(props) {
 
                             {courses.map((course, index) => {
                                 return (
-                                    <div className="w-auto h-auto grid grid-cols-4">
+                                    <div className="w-auto h-auto grid grid-cols-4 border-black border-2 border-t-0">
                                         <div className="w-auto h-auto col-span-1 flex flex-col items-start justify-start p-3 border-black border-r-2">
                                             <p className="text-2xl">
                                                 {course.title}

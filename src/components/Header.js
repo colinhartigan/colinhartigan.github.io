@@ -20,8 +20,8 @@ function Header(props) {
             link: "/about",
         },
         {
-            name: "experience",
-            link: "/experience"
+            name: "career",
+            link: "/career"
         },
         {
             name: "projects",
