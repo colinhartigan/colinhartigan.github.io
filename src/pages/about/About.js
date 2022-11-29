@@ -24,6 +24,10 @@ function About(props) {
             name: "why computer engineering?",
             text: "I have a neverending curiosity to know how everything works. As I have aged and learned, this need as been stadily satiated, especially when I discovered my passion for programming. Teaching myself to code and create things has been an instrumental part in narrowing my interests for school and my career. Ultimately, technology is super cool and I want to be at the cutting edge of its development.",
         },
+        {
+            name: "got any hobbies?",
+            text: "I spend a lot of time working on personal projects, whether it be programming, tinkering with hardware, or trying to figure out how CAD works. I also play a lot of video games and am a huge music nerd. I play viola, and I am a huge fan of EDM artists like Porter Robinson and Madeon and indie artists. ",
+        },
     ]
 
     // for getting classes from OSCAR: https://oscar.gatech.edu/bprod/bwckctlg.p_disp_course_detail?cat_term_in=202202&subj_code_in={item.dept}&crse_numb_in={item.num}
@@ -359,7 +363,7 @@ function About(props) {
                 <div className="w-full h-auto flex flex-col items-start justify-center mt-12">
                     <div className="w-full h-auto mb-4">
                         <p className="text-4xl">
-                            bio (kinda)
+                            bio
                         </p>
                         <div className="w-full h-[2px] bg-black mt-2" />
                     </div>

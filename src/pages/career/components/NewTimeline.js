@@ -7,7 +7,7 @@ function Timeline(props) {
 
     return (
         <>
-            <div className="h-auto min-w-full mt-8 relative flex flex-row items-start justify-center">
+            <div className="h-auto min-w-full relative flex flex-row items-start justify-center">
 
 
                     <div className="lg:w-[90%] w-full h-auto flex flex-row items-stretch justify-start">

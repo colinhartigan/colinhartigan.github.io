@@ -82,14 +82,7 @@ function Home(props) {
                     </div>
 
 
-                    <div className="h-[25vh] mt-[70vh]">
-                        {/* <div className="h-auto overflow-hidden">
-                            <div className="overflow-hidden h-auto">
-                                <p className="h-auto text-center text-2xl animate-arrowPeriodic overflow-hidden">
-                                    🡣
-                                </p>
-                            </div>
-                        </div> */}
+                    {/* <div className="h-[25vh] mt-[70vh]">
                         <div className="w-full h-auto flex flex-row items-center justify-center gap-6">
                             <Link to="/about" className="w-32 h-auto border-2 border-black p-2 text-center text-lg">
                                 about me
@@ -101,7 +94,30 @@ function Home(props) {
                                 projects
                             </Link>
                         </div>
+                    </div> */}
+
+                    {/* delete this after ece 1100 */}
+                    <div className="h-[25vh] mt-[65vh]">
+                        <div className="w-auto max-w-3xl h-auto flex flex-col items-center justify-center border-2 border-b-0 border-black">
+                            <div className="p-3">
+                                <p className="text-2xl text-left">
+                                    Learn about me, my career, and my projects.
+                                </p>
+                            </div>
+                            <div className="w-full h-auto grid grid-cols-3">
+                                <Link to="/about" className="w-auto h-auto col-span-1 border-2 border-l-0 border-black p-3 text-center text-lg">
+                                    about me
+                                </Link>
+                                <Link to="/career" className="w-auto h-auto col-span-1 border-2 border-l-0 border-black p-3 text-center text-lg">
+                                    career
+                                </Link>
+                                <Link to="/projects" className="w-auto h-auto col-span-1 border-2 border-x-0 border-black p-3 text-center text-lg">
+                                    projects
+                                </Link>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
                 {/* <div className="xl:h-screen h-[200vh] w-full mx-auto xl pb-7 pt-20 flex flex-col items-start justify-start">

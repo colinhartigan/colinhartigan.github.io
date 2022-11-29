@@ -10,6 +10,18 @@ import multiScrollFixed from '../../assets/ece1100/multiScrollFixed.mp4';
 import stockExperiment from '../../assets/ece1100/stockExperiment.mp4';
 import flashTest from '../../assets/ece1100/flashTest.mp4';
 import sunnyEarly from '../../assets/ece1100/sunnyEarly.png'
+import rainyHeavy from '../../assets/ece1100/rainyHeavy.mp4'
+import rainyLight from '../../assets/ece1100/rainyLight.mp4'
+import conditionDemo from '../../assets/ece1100/conditionDemo.mp4'
+import faceplate from '../../assets/ece1100/faceplate.png'
+
+import clearNight from '../../assets/ece1100/conditions/clearNight.mp4'
+import clearDay from '../../assets/ece1100/conditions/clearDay.png'
+import atmosphereNight from '../../assets/ece1100/conditions/atmosphereNight.mp4'
+import atmosphereDay from '../../assets/ece1100/conditions/atmosphereDay.mp4'
+import cloudsDay from '../../assets/ece1100/conditions/cloudsDay.mp4'
+import cloudsNight from '../../assets/ece1100/conditions/cloudsNight.mp4'
+import rainDay from '../../assets/ece1100/conditions/rainDay.mp4'
 
 function Media(props) {
 
@@ -53,9 +65,12 @@ function Media(props) {
                 </div> : null}
                 {isImage ? <img className={previewCallback !== undefined ? "cursor-pointer" : ""} src={src} alt={alt} onClick={openPreview} /> : <video ref={vidRef} muted onClick={playV} width="100%" height="100%" src={src} />}
             </div>
-            <p className="w-full text-md italic p-2">
-                {desc}
-            </p>
+
+            {desc !== undefined ?
+                <p className="w-full text-md italic p-2">
+                    {desc}
+                </p>
+                : null}
         </div>
     )
 }
@@ -69,6 +84,37 @@ function ECEproject(props) {
     const conditions = [
         {
             name: "clear",
+            day: clearDay,
+            night: clearNight,
+            weird: true,
+        },
+        {
+            name: "clouds",
+            day: cloudsDay,
+            night: cloudsNight,
+        },
+        {
+            name: "atmosphere",
+            day: atmosphereDay,
+            night: atmosphereNight,
+        },
+        {
+            name: "rain",
+            day: rainDay,
+            night: undefined,
+        },
+        {
+            name: "snow",
+            day: undefined,
+            night: undefined,
+        },
+        {
+            name: "drizzle",
+            day: undefined,
+            night: undefined,
+        },
+        {
+            name: "thunderstorm",
             day: undefined,
             night: undefined,
         }
@@ -124,7 +170,7 @@ function ECEproject(props) {
                                             micropython on ESP32
                                         </p>
                                     </div>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -252,6 +298,7 @@ function ECEproject(props) {
                             </div>
 
                             <div className="w-auto h-auto flex flex-row items-stretch justify-center gap-3">
+                                <Media src={conditionDemo} desc="condition description is displayed every once in a while" openPreview={setPreview} />
                                 <Media src={sunnyEarly} isImage desc="early design for clear/sunny condition" openPreview={setPreview} />
 
                             </div>
@@ -273,8 +320,8 @@ function ECEproject(props) {
                         <div className="w-full h-auto flex flex-row items-start justify-center mt-4 gap-3">
 
                             <div className="w-auto h-auto flex flex-row items-stretch justify-center gap-3">
-                                <Media src={null} isImage desc="rainy condition with heavy rain" openPreview={setPreview} />
-                                <Media src={null} isImage desc="rainy condition with light rain" openPreview={setPreview} />
+                                <Media src={rainyHeavy} desc="rainy condition with heavy rain" openPreview={setPreview} />
+                                <Media src={rainyLight} desc="rainy condition with light rain" openPreview={setPreview} />
 
                             </div>
 
@@ -298,7 +345,7 @@ function ECEproject(props) {
                             <div className="w-full h-[2px] bg-black mt-2" />
                         </div>
 
-                        <div className="w-3/4 h-auto flex flex-col items-start justify-center mx-auto mt-4">
+                        <div className="w-full h-auto flex flex-col items-start justify-center mx-auto mt-4">
 
                             <div className="w-full h-auto grid grid-cols-5 border-black border-2">
                                 <div className="w-full h-auto p-3 col-span-1 border-black border-r-2">
@@ -330,21 +377,45 @@ function ECEproject(props) {
                                         <div className="w-full h-auto p-3 col-span-2 border-black border-r-2">
                                             {condition.day === undefined ?
                                                 <p className="text-lg text-center italic">
-                                                    coming soon
+                                                    work in progress
                                                 </p>
-                                                : null}
+                                                : <Media isImage={condition.weird} src={condition.day} />}
                                         </div>
                                         <div className="w-full h-auto p-3 col-span-2 border-black">
-                                            {condition.day === undefined ?
+                                            {condition.night === undefined ?
                                                 <p className="text-lg text-center italic">
-                                                    coming soon
+                                                    work in progress
                                                 </p>
-                                                : null}
+                                                : <Media src={condition.night} />}
                                         </div>
                                     </div>
                                 )
                             })}
 
+                        </div>
+
+                    </div>
+
+                    <div className="w-full h-auto mt-6">
+
+                        <div className="w-full h-auto mb-4">
+                            <p className="text-4xl">
+                                unfinished business
+                            </p>
+                            <div className="w-full h-[2px] bg-black mt-2" />
+                        </div>
+
+                        <div className="w-full h-auto flex flex-row items-start justify-center mt-4 gap-3">
+
+                            <div className="w-auto h-auto flex flex-col items-start justify-start">
+                                <p className="text-xl">
+                                    I still need to create scenes for several weather conditions, but I have been working on incrimental improvements, such as procedurally generated clouds, to make implementation and future alteration easier. Furthermore, I plan to create a housing for the hardware so I can mount it on the wall. Eventually, weathermat will be an eye-catching decorative ornament to my wall and a useful tool to my daily life. Gone will be the days of having to check my phone for the waether before leaving my dorm every morning.
+                                </p>
+                            </div>
+
+                            <div className="w-auto h-auto flex flex-row items-stretch justify-center gap-3">
+                                <Media src={faceplate} isImage desc="3D printable faceplate. originally found on thingverse but modified for this specific application" openPreview={setPreview} />
+                            </div>
                         </div>
 
                     </div>
