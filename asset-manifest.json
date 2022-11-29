@@ -1,14 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.d1115c52.css",
-    "main.js": "/static/js/main.4417b767.js",
+    "main.css": "/static/css/main.66a509ea.css",
+    "main.js": "/static/js/main.423a88b3.js",
     "static/js/787.0f77b240.chunk.js": "/static/js/787.0f77b240.chunk.js",
     "static/media/textScroll.mp4": "/static/media/textScroll.99c001a5f4990b585589.mp4",
     "static/media/contact.png": "/static/media/contact.29ca8239235d16db1746.png",
+    "static/media/conditionDemo.mp4": "/static/media/conditionDemo.4521bea862b7119115f7.mp4",
     "static/media/multiScrollTear.mp4": "/static/media/multiScrollTear.9617d99f6322e734d780.mp4",
+    "static/media/rainyLight.mp4": "/static/media/rainyLight.41e98d16ad17f715a815.mp4",
+    "static/media/rainDay.mp4": "/static/media/rainDay.d942999b25454cd00812.mp4",
+    "static/media/clearNight.mp4": "/static/media/clearNight.80ae0eaee1e89e049fec.mp4",
     "static/media/multiScrollFixed.mp4": "/static/media/multiScrollFixed.98341d2bf733f4c914ee.mp4",
+    "static/media/rainyHeavy.mp4": "/static/media/rainyHeavy.6a31e3414153d0cf5e41.mp4",
+    "static/media/atmosphereDay.mp4": "/static/media/atmosphereDay.fbe9d84ab0ce4c3f727b.mp4",
+    "static/media/cloudsDay.mp4": "/static/media/cloudsDay.656f37e673f42a97001b.mp4",
     "static/media/flashTest.mp4": "/static/media/flashTest.bafc0ca665e72020cd95.mp4",
+    "static/media/atmosphereNight.mp4": "/static/media/atmosphereNight.ea5a1a3cabdfcba4c393.mp4",
+    "static/media/cloudsNight.mp4": "/static/media/cloudsNight.92ff3aaf19c300cdcb08.mp4",
     "static/media/sunnyEarly.png": "/static/media/sunnyEarly.5dbc42f4799366168799.png",
+    "static/media/clearDay.png": "/static/media/clearDay.e812c9a6bf62f1419d3b.png",
     "static/media/stockExperiment.mp4": "/static/media/stockExperiment.91ca2f5ee6d9526bf445.mp4",
     "static/media/SHC_group.jpg": "/static/media/SHC_group.dbeff8b45183aeaed0e9.jpg",
     "static/media/APL_poster.png": "/static/media/APL_poster.9c9e8b1d65f77aa9b71d.png",
@@ -18,15 +28,16 @@
     "static/media/shc.jpg": "/static/media/shc.347df171e26f41f973a2.jpg",
     "static/media/skyline.jpg": "/static/media/skyline.7f6a6f6c206a316d27c1.jpg",
     "static/media/pixelArt.png": "/static/media/pixelArt.2cad3ab10eff5cf863a9.png",
+    "static/media/faceplate.png": "/static/media/faceplate.65ab42278961a52325ed.png",
     "static/media/resume.pdf": "/static/media/resume.38863609ca7f15a793a6.pdf",
     "static/media/namebg.png": "/static/media/namebg.0d15c3a362d888c83333.png",
     "index.html": "/index.html",
-    "main.d1115c52.css.map": "/static/css/main.d1115c52.css.map",
-    "main.4417b767.js.map": "/static/js/main.4417b767.js.map",
+    "main.66a509ea.css.map": "/static/css/main.66a509ea.css.map",
+    "main.423a88b3.js.map": "/static/js/main.423a88b3.js.map",
     "787.0f77b240.chunk.js.map": "/static/js/787.0f77b240.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1115c52.css",
-    "static/js/main.4417b767.js"
+    "static/css/main.66a509ea.css",
+    "static/js/main.423a88b3.js"
   ]
 }
