@@ -1,8 +1,62 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import FullScreenPreview from "../../../components/FullScreenPreview";
 
 import poster from "../../../assets/experience/APL_poster.png";
+
+
+function Media(props) {
+
+    const src = props.src;
+    const isImage = props.isImage !== undefined ? props.isImage : false;
+    const alt = props.alt !== undefined ? props.alt : "media missing";
+    const desc = props.desc
+
+    const previewCallback = props.openPreview
+
+    const vidRef = useRef(null)
+    const [showPlayText, setShowPlayText] = useState(true)
+
+    function playV() {
+        !vidRef.current.paused ? vidRef.current.pause() : vidRef.current.play()
+        setShowPlayText(!showPlayText)
+    }
+
+    function openPreview() {
+        previewCallback(src, desc)
+    }
+
+    useEffect(() => {
+        if (vidRef.current !== null) {
+            vidRef.current.addEventListener('play', () => {
+                setShowPlayText(false)
+            })
+            vidRef.current.addEventListener('pause', () => {
+                setShowPlayText(true)
+            })
+        }
+    }, [])
+
+    return (
+        <div className="w-full h-auto flex flex-col items-start justify-start">
+            <div className="relative w-full h-auto flex flex-col items-start justify-start">
+                {!isImage && showPlayText ? <div className="absolute w-full h-full flex flex-col items-center justify-center bg-black/50">
+                    <p className="text-md w-auto h-auto text-white">
+                        click to play
+                    </p>
+                </div> : null}
+                {isImage ? <img className={previewCallback !== undefined ? "cursor-pointer" : ""} src={src} alt={alt} onClick={openPreview} /> : <video ref={vidRef} muted onClick={playV} width="100%" height="100%" src={src} />}
+            </div>
+
+            {desc !== undefined ?
+                <p className="w-full text-md italic p-2">
+                    {desc}
+                </p>
+                : null}
+        </div>
+    )
+}
+
 
 function ExperienceDetail(props) {
 
@@ -79,10 +133,7 @@ function ExperienceDetail(props) {
                                 {data.content.media.map((item, index) => {
                                     return (
                                         <div className="w-full h-auto flex flex-col justify-start items-center mt-4">
-                                            <img className="cursor-pointer" src={item.img} alt="descriptive alt text" onClick={() => { setPreviewOpen(true); setPreviewImage(item.img); setPreviewDescription(item.desc) }} />
-                                            <p className="text-md self-start italic mt-2">
-                                                {item.desc}
-                                            </p>
+                                            <Media src={item.img} isImage={item.isImage} alt="descriptive alt text" desc={item.desc} openPreview={() => { setPreviewOpen(true); setPreviewImage(item.img); setPreviewDescription(item.desc) }} />
                                         </div>
                                     )
                                 })

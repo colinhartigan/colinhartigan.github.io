@@ -8,6 +8,7 @@ import FullScreenPreview from '../../components/FullScreenPreview';
 
 import APL_poster from "../../assets/experience/APL_poster.png"
 import SHC_group from "../../assets/experience/SHC_group.jpg"
+import APL_threading from '../../assets/experience/APL_threading.mp4';
 
 function Experience(props) {
 
@@ -30,6 +31,7 @@ function Experience(props) {
                 media: [
                     {
                         "img": SHC_group,
+                        "isImage": true,
                         "desc": "me + counselors <3"
                     }
                 ]
@@ -45,6 +47,12 @@ function Experience(props) {
             content: {
                 description: "Under the guidance of my mentor, who worked in APL's Space Exploration Sector, I wrote software to parse and aggregate large batches of NASA weather satellite data to train a deep learning model. Given the magnitude of the datasets, I implemented multithreading to scale the efficiency of my software.",
                 tags: ["python", "tensorflow", "data parsing and processing", "multithreading", "csv"],
+                media: [
+                    {
+                        "img": APL_threading,
+                        "desc": "demo of multithreading implementation parsing 50+ csv files with 3m+ datapoints each"
+                    }
+                ]
             }
         },
 
@@ -72,6 +80,7 @@ function Experience(props) {
                 media: [
                     {
                         "img": APL_poster,
+                        "isImage": true,
                         "desc": "poster abstract of visualization software. includes examples, features, and results."
                     }
                 ]
