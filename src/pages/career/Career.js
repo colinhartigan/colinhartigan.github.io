@@ -150,7 +150,7 @@ function Experience(props) {
                             </p>
                         </div>
 
-                        <div className="w-full h-auto flex flex-col items-start justify-start mt-6">
+                        {/* <div className="w-full h-auto flex flex-col items-start justify-start mt-6">
 
                             <div className="w-full h-auto mb-4">
                                 <p className="text-4xl">
@@ -163,7 +163,7 @@ function Experience(props) {
                                 environments as a programmer. I am also a solo full-stack developer, creating applications with over 200,000 total downloads.
                                 I am seeking a software engineering internship for May - August 2022.
                             </p>
-                        </div>
+                        </div> */}
 
                         <div className="w-full h-auto flex flex-col items-start justify-start mt-6">
 

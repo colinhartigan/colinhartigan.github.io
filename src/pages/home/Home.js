@@ -97,7 +97,7 @@ function Home(props) {
                     </div> */}
 
                     {/* delete this after ece 1100 */}
-                    <div className="h-[25vh] mt-[65vh]">
+                    {/* <div className="h-[25vh] mt-[65vh]">
                         <div className="w-auto max-w-3xl h-auto flex flex-col items-center justify-center border-2 border-b-0 border-black">
                             <div className="p-3">
                                 <p className="text-2xl text-left">
@@ -116,7 +116,7 @@ function Home(props) {
                                 </Link>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 
