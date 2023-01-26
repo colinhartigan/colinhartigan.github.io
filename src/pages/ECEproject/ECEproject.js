@@ -140,7 +140,7 @@ function ECEproject(props) {
 
                     <div className="w-full h-auto mb-3">
                         <a className="text-md underline cursor-pointer" href="/#/projects">
-                            🠔 return to projects
+                            ← return to projects
                         </a>
                     </div>
 
