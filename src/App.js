@@ -1,7 +1,7 @@
 import react from 'react';
 import { BrowserRouter as Link, Route, HashRouter, Routes, Navigate } from "react-router-dom";
 
-import Home from './pages/home/Home.js';
+import Home from './pages/home/newHome.js';
 import Career from './pages/career/Career.js'
 import Projects from './pages/projects/Projects.js';
 import Resume from './pages/resume/Resume.js';

@@ -165,9 +165,9 @@ function Experience(props) {
                             </p>
                         </div> */}
 
-                        <div className="w-full h-auto flex flex-col items-start justify-start mt-6">
+                        <div className="w-full h-auto flex flex-col items-start justify-start ">
 
-                            <div className="w-full h-auto mb-4">
+                            {/* <div className="w-full h-auto mb-4">
                                 <p className="text-4xl">
                                     looking ahead
                                 </p>
@@ -197,7 +197,7 @@ function Experience(props) {
                                     })}
 
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="w-full h-auto flex flex-col items-start justify-start mt-6">
 
