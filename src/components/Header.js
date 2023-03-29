@@ -1,12 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import Icon from '@mdi/react'
 import { mdiMenu } from '@mdi/js';
 
 
 function Header(props) {
+
+    const [page, setPage] = useState('home')
+    const location = useLocation();
+
+    useEffect(() => {
+        //set the page state to the current page's hashroute
+        setPage(location.pathname)
+    }, [location])
 
     const [showMenu, setShowMenu] = useState(false);
 
@@ -47,10 +55,17 @@ function Header(props) {
                             ;
                         </p>
                     </div>
+
+                    <div className="w-auto h-full visible lg:hidden bg-black flex flex-col items-center justify-center">
+                        <p className="text-left text-white text-2xl">
+                            semicolin
+                        </p>
+                    </div>
+
                     <div className="hidden lg:visible w-auto h-full lg:flex flex-row items-stretch justify-center">
                         {menu.map((item, index) => {
                             return (
-                                <Link to={item.link} className={`w-auto min-h-full px-6 flex flex-row justify-center items-center border-black border-t-2 ${item.divider !== undefined ? 'border-r-2' : ''}`}>
+                                <Link to={item.link} className={`w-auto min-h-full px-6 flex flex-row justify-center items-center border-black border-t-2 ${page === item.link ? 'bg-black text-white' : ''} ${item.divider !== undefined ? 'border-r-2' : ''}`}>
                                     <p className="text-center text-xl">
                                         {item.name}
                                     </p>
@@ -66,12 +81,13 @@ function Header(props) {
                     </div>
                 </div>
             </div>
+
             {/* dropdown */}
             {showMenu ?
                 <div className="fixed w-full h-auto z-50 top-12 flex flex-col bg-white border-black border-b-2">
                     {menu.map((item, index) => {
                         return (
-                            <Link to={item.link} className={`w-auto h-12 flex flex-col justify-center items-center border-black border-x-2 ${item.divider !== undefined ? 'border-b-2' : ''}`} onClick={() => { setShowMenu(false) }}>
+                            <Link to={item.link} className={`w-auto h-12 flex flex-col justify-center items-center border-black border-x-2 ${page === item.link ? 'bg-black text-white' : ''} ${item.divider !== undefined ? 'border-b-2' : ''}`} onClick={() => { setShowMenu(false) }}>
                                 <p className="text-center text-xl">
                                     {item.name}
                                 </p>

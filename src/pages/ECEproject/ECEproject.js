@@ -145,18 +145,18 @@ function ECEproject(props) {
                     </div>
 
 
-                    <div className="relative w-full h-auto overflow-hidden flex flex-col items-center justify-center border-2 border-black">
+                    <div className="relative w-full h-auto overflow-hidden flex flex-col items-start justify-center border-2 border-black">
                         <div className="absolute w-full h-full">
                             <img className="grayscale" src={naturebg} alt="thing" />
                         </div>
 
-                        <div className="relative w-full h-auto flex flex-col items-start justify-start pb-12 ">
-                            <div className="w-auto p-3 bg-white border-black border-r-2">
+                        <div className="relative w-auto h-auto flex flex-col items-start justify-start pb-12 ">
+                            <div className="w-full p-3 bg-white border-black border-r-2">
                                 <a href="https://github.com/colinhartigan/weathermat" target="_blank" rel="noreferrer" className="text-5xl underline decoration-2">
                                     weathermat
                                 </a>
                             </div>
-                            <div className="w-auto h-auto flex flex-row items-start justify-start">
+                            <div className="w-full h-auto flex flex-row items-start justify-start">
                                 <div className="w-auto h-auto bg-white border-black border-2 border-l-0 flex lg:flex-row flex-col items-center justify-start">
                                     <div className="h-full p-3">
                                         <p className="text-2xl">

@@ -60,12 +60,6 @@ function Projects(props) {
         <div className="h-fit w-2xl max-w-7xl mx-auto flex flex-col items-start justify-start">
             <div className="w-[95%] h-auto grow mx-auto flex flex-col items-start justify-center pt-20 pb-8">
 
-                <div className="w-min border-2 border-black p-2 mb-10 overflow-hidden bg-white">
-                    <p className="text-5xl h-full">
-                        PROJECTS
-                    </p>
-                </div>
-
                 <div className="w-full h-auto flex flex-col items-center justify-center gap-12">
                     <FeaturedECE />
                     <FeaturedVAL />

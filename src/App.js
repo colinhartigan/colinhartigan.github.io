@@ -1,7 +1,7 @@
-import react from 'react';
-import { BrowserRouter as Link, Route, HashRouter, Routes, Navigate } from "react-router-dom";
+import {useEffect, useState} from 'react';
+import { BrowserRouter as Link, Route, HashRouter, Routes, Navigate, useLocation } from "react-router-dom";
 
-import Home from './pages/home/newHome.js';
+import Home from './pages/home/Home.js';
 import Career from './pages/career/Career.js'
 import Projects from './pages/projects/Projects.js';
 import Resume from './pages/resume/Resume.js';
@@ -21,10 +21,10 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Navigate to="/home" />} />
                     <Route path="/home" element={<Home />} />
-                    <Route path="/about" element={<About/>} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/career" element={<Career />} />
                     <Route path="/projects" element={<Projects />} />
-                    <Route path="/ece1100" element={<ECEproject/>} />
+                    <Route path="/ece1100" element={<ECEproject />} />
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/contact" element={<Contact />} />
 
