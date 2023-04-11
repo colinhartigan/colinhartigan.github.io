@@ -22,7 +22,7 @@ function Home(props) {
                         <div className="absolute w-auto left-0 bottom-0 h-auto flex flex-col items-center justify-center z-10 bg-white">
 
                             <div className="w-full h-auto border-y-2 border-black flex flex-row items-center justify-start">
-                                <p className="h-full text-5xl p-3 font-medium h-full w-auto text-left">
+                                <p className="h-full text-5xl p-3 font-medium w-auto text-left">
                                     colin hartigan
                                 </p>
                                 <div className="w-auto h-full flex grow bg-black fill-black border-black z-20" />
