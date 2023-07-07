@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 import FeaturedVAL from './components/Featured_VAL'
 import FeaturedECE from './components/Featured_ECE'
+import FeaturedLEDGER from './components/Featured_LEDGER'
 import Project from './components/Project'
 
 function Projects(props) {
@@ -61,6 +62,7 @@ function Projects(props) {
             <div className="w-[95%] h-auto grow mx-auto flex flex-col items-start justify-center pt-20 pb-8">
 
                 <div className="w-full h-auto flex flex-col items-center justify-center gap-12">
+                    {/* <FeaturedLEDGER /> */}
                     <FeaturedECE />
                     <FeaturedVAL />
                 </div>

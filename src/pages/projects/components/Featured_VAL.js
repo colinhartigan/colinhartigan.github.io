@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import CountUp from 'react-countup';
 
 import Icon from '@mdi/react'
 import { mdiArrowRight, mdiStarOutline, mdiSourceBranch, mdiDownloadOutline } from '@mdi/js'
@@ -85,9 +84,8 @@ function Featured(props) {
                 <div className="xl:w-full w-full min-h-full flex flex-row items-center justify-center">
 
                     <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-r-2 border-l-2 border-b-2 border-black">
-
-
-                        {downloads !== 0 ? <CountUp className="text-3xl text-center" end={downloads} useEasing separator="," duration={4} /> : <p className="text-3xl text-center">0</p>}
+                   
+                    <p className="text-3xl text-center">{downloads}</p>
 
                         <div className="w-full h-auto px-4 flex flex-row items-center justify-center">
                             <Icon path={mdiDownloadOutline} size={1} />
@@ -99,7 +97,8 @@ function Featured(props) {
                     </div>
 
                     <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-r-2 border-b-2 border-black">
-                        {stars !== 0 ? <CountUp className="text-3xl text-center" end={stars} useEasing separator="," duration={3} /> : <p className="text-3xl text-center">0</p>}
+
+                        <p className="text-3xl text-center">{stars}</p>
 
                         <div className="w-full h-auto flex flex-row items-center justify-center">
                             <Icon path={mdiStarOutline} size={1} />
@@ -110,8 +109,9 @@ function Featured(props) {
                     </div>
 
                     <div className="min-h-full w-full py-4 flex flex-col items-center justify-center border-black border-r-2 border-b-2">
-                        {forks !== 0 ? <CountUp className="text-3xl text-center" end={forks} useEasing separator="," duration={3} /> : <p className="text-3xl text-center">0</p>}
-
+                        
+                        <p className="text-3xl text-center">{forks}</p>
+                        
                         <div className="w-full h-auto flex flex-row items-center justify-center">
                             <Icon path={mdiSourceBranch} size={1} />
                             <p className="text-lg ml-1">

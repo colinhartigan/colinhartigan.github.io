@@ -9,6 +9,12 @@ import naturebg from '../../../assets/naturebg.png'
 
 function Featured(props) {
 
+    const [downloads, setDownloads] = useState(0);
+    const [stars, setStars] = useState(0);
+    const [forks, setForks] = useState(0);
+
+    const [image, setImage] = useState("");
+
     return (
 
         <div className="w-[100%] max-w-[100%] h-auto self-center flex flex-col items-start justify-start">
@@ -17,7 +23,7 @@ function Featured(props) {
 
                 <div className="min-h-full xl:w-auto w-full px-4 py-5 border-r-2 xl:border-b-2 border-b-2 border-l-2 border-t-2 border-black flex flex-col justify-center items-start">
                     <p className="text-4xl font-medium">
-                        weathermat
+                        fbn-ledger
                     </p>
                 </div>
 
