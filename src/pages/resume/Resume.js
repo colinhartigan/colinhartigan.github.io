@@ -11,8 +11,8 @@ function NotFound(props) {
                 height='auto'
                 type='application/pdf'
             />
-            <div className='h-16 pt-4'>
-                <p className='text-xl'>last updated: 09/10/2023</p>
+            <div className='h-16 pt-4 w-full border-black border-t-2'>
+                <p className='text-xl w-full text-center italic'>last updated: 09/10/2023</p>
             </div>
         </div>
     );

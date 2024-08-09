@@ -18,6 +18,25 @@ function Experience(props) {
 
     const data = [
         {
+            org: "Lenovo",
+            title: "quality engineering intern",
+            location: "Morrisville, NC",
+            date: "jun. 2024 - aug. 2024",
+            image: "",
+            content: {
+                description:
+                    "Lenovo runs an internal beta program to test new ThinkPads before they are released to the public. As a quality engineer, I managed several families of systems, including the P14s Gen 5 and P16s Gen 3, and was responsible for triaging, tracking, and resolving issues reported by beta testers. During my time, Lenovo also ran an external beta with five Fortune 500 customers to test the ThinkPad T14s Gen6, a first-generation Windows Copilot+ PC. During this program, I triaged issues reported by customers in collaboration with the beta program manager, ensuring the development teams could quickly resolve them before the product's launch to the general public. Through my work, I contributed to the successful launch of these new ThinkPads and contributed to over $500,000 in avoided post-launch costs to Lenovo.",
+                tags: ["quality assurance", "laptop repair", "powershell", "batch"],
+                // media: [
+                //     // {
+                //     //     img: IG_demo,
+                //     //     isImage: true,
+                //     //     desc: "cyberspan showcase at TechNet Augusta, featuring the interactive map component I created",
+                //     // },
+                // ],
+            },
+        },
+        {
             org: "IntelliGenesis LLC",
             title: "software engineering intern",
             location: "Columbia, MD",
@@ -123,24 +142,6 @@ function Experience(props) {
         },
     ];
 
-    const future = [
-        {
-            title: "Future Internships",
-            time: "summer 2023 and beyond",
-            desc: "I aim to obtain experience at several companies throughout my college career to have a diverse set of skills and experiences to draw from when I ultimately enter the workforce after graduation.",
-        },
-        {
-            title: "VIP at Georgia Tech",
-            time: "fall 2024",
-            desc: "I plan to join a Vertically Integrated Project, VIP, at Georgia Tech to gain experience in a team-based research environment. I will gain experience in the research process and work with students from a diverse set of disciplines.",
-        },
-        {
-            title: "BSMS",
-            time: "2027",
-            desc: "I plan to take advantage of Georgia Tech's BS/MS program to obtain a Master's degree in Computer Engineering. I will need to maintain a certain GPA and build positive relationships with faculty to be accepted into the program.",
-        },
-    ];
-
     const [selectedJob, setSelectedJob] = useState(null);
     const [searchParams, setSearchParams] = useSearchParams();
     const [redir, setRedir] = useState(false);
@@ -227,9 +228,8 @@ function Experience(props) {
                             </div> */}
 
                             <div className='w-full h-auto flex flex-col items-start justify-start mt-6'>
-                                <div className='w-full h-auto mb-4'>
+                                <div className='w-auto h-auto p-3 mb-4 border-black border-2'>
                                     <p className='text-4xl'>work experience</p>
-                                    <div className='w-full h-[2px] bg-black mt-2' />
                                 </div>
                                 <NewTimeline data={data} callback={selectExperience} />
                             </div>
