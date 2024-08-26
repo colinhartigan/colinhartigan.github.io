@@ -1,14 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    mode: "jit",
-    content: ["./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         fontFamily: {
-            sans: ['Lora', 'sans-serif'],
-            serif: ['Lora', 'serif'],
-            display: ['DM Serif Display']
+            sans: ['"Source Serif 4"', "sans-serif"],
+            serif: ['"Source Serif 4"', "serif"],
+            body: ['"Source Serif 4"'],
         },
+        extend: {},
     },
-    darkMode: 'class',
     plugins: [],
-}
+};
