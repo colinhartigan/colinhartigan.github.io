@@ -9,7 +9,7 @@ function App() {
             <NavBar />
 
             {/* quick about */}
-            <div className='columns-2 py-6'>
+            <div className='columns-2'>
                 <div className='w-full flex flex-col justify-center items-center'>
                     <img src={portrait} className='grayscale w-6/12' />
                 </div>
@@ -48,6 +48,8 @@ function App() {
                     </div>
                 </div>
             </div>
+
+            <div className='min-h-[6000px]'></div>
         </div>
     );
 }
