@@ -49,7 +49,7 @@ function App() {
                 </div>
             </div>
 
-            <div className='min-h-[6000px]'></div>
+            {/* <div className='min-h-[6000px]'></div> */}
         </div>
     );
 }
