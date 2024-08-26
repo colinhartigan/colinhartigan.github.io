@@ -15,19 +15,21 @@ export default function Home({}) {
     }, []);
 
     return (
-        <div className='columns-2'>
-            <div className='w-full flex flex-col justify-center items-center'>
-                <img src={portrait} className='grayscale w-6/12' />
+        <div className="flex flex-row items-stretch justify-evenly gap-4 px-4">
+            <div className="flex w-1/3 flex-col items-center justify-center">
+                <img src={portrait} className="w-full grayscale" />
             </div>
-            <div className='h-full flex flex-grow flex-col justify-center items-start'>
-                <div className='flex flex-col justify-center items-start flex-grow gap-2'>
+            <div className="flex flex-col justify-center">
+                <div className="flex flex-grow flex-col items-start justify-center gap-2">
                     <p>Student at Georgia Tech</p>
-                    <ul className='list-disc text-md list-inside'>
+                    <ul className="text-md list-inside list-disc">
                         <li>{schoolYear}-year computer engineering</li>
-                        <li>computing hardware, computer architecture, devices</li>
+                        <li>
+                            computing hardware, computer architecture, devices
+                        </li>
                     </ul>
                 </div>
-                <div className='flex flex-row justify-start items-start gap-4'>
+                <div className="flex flex-row items-start justify-start gap-4">
                     {[
                         {
                             title: "linkedin",
@@ -42,13 +44,15 @@ export default function Home({}) {
                     ].map((item) => {
                         return (
                             <a
-                                className='flex flex-row justify-start items-center gap-1'
+                                className="flex flex-row items-center justify-start gap-1"
                                 key={item.title}
                                 href={item.href}
-                                target='_blank'
+                                target="_blank"
                             >
                                 {item.icon}
-                                <p className='text-sm underline'>{item.title}</p>
+                                <p className="text-sm underline">
+                                    {item.title}
+                                </p>
                             </a>
                         );
                     })}
