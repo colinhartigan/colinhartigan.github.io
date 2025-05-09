@@ -1,6 +1,4 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import Career from "./pages/Career";
 import Home from "./pages/Home";
 
 function App() {
@@ -8,11 +6,11 @@ function App() {
         <HashRouter>
             <div className="container mx-auto h-screen max-w-screen-lg">
                 {/* topbar */}
-                <NavBar />
+                {/* <NavBar /> */}
 
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/career" element={<Career />} />
+                    {/* <Route path="/career" element={<Career />} /> */}
                 </Routes>
 
                 {/* <div className='min-h-[6000px]'></div> */}

@@ -9,7 +9,7 @@ export default function NavBar({}) {
                 </h1>
             </Link>
 
-            {[
+            {/* {[
                 {
                     title: "career",
                     href: "/career",
@@ -28,7 +28,7 @@ export default function NavBar({}) {
                         <p>{link.title}</p>
                     </Link>
                 );
-            })}
+            })} */}
 
             {/* <a href="/projects">projects</a>
 
