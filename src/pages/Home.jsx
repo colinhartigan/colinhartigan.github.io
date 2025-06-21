@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { PiGithubLogo, PiLinkedinLogo } from "react-icons/pi";
+import portrait from "../assets/portrait.jpeg";
 
 export default function Home({}) {
     const schoolYear = useMemo(() => {
@@ -16,10 +17,10 @@ export default function Home({}) {
     return (
         <div className="flex h-full w-full flex-col items-center justify-center">
             <div className="flex flex-row items-stretch justify-evenly gap-4 px-4">
-                {/* <div className="flex w-1/2 flex-col items-center justify-center">
-                    <img src={portrait} className="w-1/2 grayscale" />
-                </div> */}
-                <div className="flex w-full flex-col gap-8">
+                <div className="flex w-1/2 flex-col items-center justify-center">
+                    <img src={portrait} className="w-1/2" />
+                </div>
+                <div className="flex w-1/2 flex-col gap-8">
                     <p className="text-3xl font-semibold">Colin Hartigan</p>
                     <div className="flex flex-grow flex-col items-start justify-center gap-2">
                         <p>student at Georgia Tech</p>
