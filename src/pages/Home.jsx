@@ -1,18 +1,17 @@
-import { useMemo } from "react";
 import { PiGithubLogo, PiLinkedinLogo } from "react-icons/pi";
 import portrait from "../assets/portrait.jpeg";
 
 export default function Home({}) {
-    const schoolYear = useMemo(() => {
-        let date = new Date();
-        let month = date.getMonth();
-        let year = date.getFullYear();
-        console.log(month, year);
-        if (year === 2025 && month >= 4) {
-            return "fourth";
-        }
-        return "third";
-    }, []);
+    // const schoolYear = useMemo(() => {
+    //     let date = new Date();
+    //     let month = date.getMonth();
+    //     let year = date.getFullYear();
+    //     console.log(month, year);
+    //     if (year === 2025 && month >= 4) {
+    //         return "fourth";
+    //     }
+    //     return "third";
+    // }, []);
 
     return (
         <div className="flex h-full w-full flex-col items-center justify-center">
@@ -25,7 +24,7 @@ export default function Home({}) {
                     <div className="flex flex-grow flex-col items-start justify-center gap-2">
                         <p>student at Georgia Tech</p>
                         <ul className="text-md list-inside list-disc">
-                            <li>{schoolYear} year - computer engineering</li>
+                            <li>fourth year - computer engineering</li>
                             <li>
                                 computer hardware & architecture, embedded
                                 devices
