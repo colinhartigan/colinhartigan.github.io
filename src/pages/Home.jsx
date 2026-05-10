@@ -24,10 +24,16 @@ export default function Home({}) {
                     <div className="flex flex-grow flex-col items-start justify-center gap-2">
                         <p>student at Georgia Tech</p>
                         <ul className="text-md list-inside list-disc">
-                            <li>fourth year - computer engineering</li>
                             <li>
+                                master&apos;s - electrical and computer
+                                engineering
+                            </li>
+                            {/* <li>
                                 computer hardware & architecture, embedded
                                 devices
+                            </li> */}
+                            <li>
+                                computer architecture, embedded devices, VLSI
                             </li>
                         </ul>
                     </div>
